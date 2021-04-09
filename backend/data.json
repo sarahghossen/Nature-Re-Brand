@@ -1,6 +1,210 @@
 [
   {
     "name": "Charlie",
-    "_id": 6543
+    "age": "8",
+    "species": "Cat",
+    "gender": "Male",
+    "Breed": "Domestic",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Stella",
+    "age": "9",
+    "species": "Cat",
+    "gender": "Female",
+    "Breed": "Domestic",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Cyril",
+    "age": "7",
+    "species": "Cat",
+    "gender": "Male",
+    "Breed": "Domestic",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Fatty",
+    "age": "5",
+    "species": "Cat",
+    "gender": "Male",
+    "Breed": "Domestic",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Misty",
+    "age": "6",
+    "species": "Cat",
+    "gender": "Male",
+    "Breed": "Domestic",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Cloudy",
+    "age": "7",
+    "species": "Cat",
+    "gender": "Female",
+    "Breed": "Domestic",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Silverpelt",
+    "age": "2",
+    "species": "Cat",
+    "gender": "Male",
+    "Breed": "Domestic",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Luna",
+    "age": "4",
+    "species": "Cat",
+    "gender": "Female",
+    "Breed": "Domestic",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Takoda",
+    "age": "1",
+    "species": "Cat",
+    "gender": "Male",
+    "Breed": "Siamese",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Leïa",
+    "age": "4",
+    "species": "Cat",
+    "gender": "Female",
+    "Breed": "Domestic",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Sif",
+    "age": "4",
+    "species": "Dog",
+    "gender": "Female",
+    "Breed": "Pit bull/ lab",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Winston",
+    "age": "5",
+    "species": "Dog",
+    "gender": "Male",
+    "Breed": "Golden Retriever",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Snooky",
+    "age": "9",
+    "species": "Dog",
+    "gender": "Male",
+    "Breed": "Brittany Spaniel",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Sokka",
+    "age": "1",
+    "species": "Dog",
+    "gender": "Male",
+    "Breed": "Husky",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Archie",
+    "age": "1",
+    "species": "Dog",
+    "gender": "Male",
+    "Breed": "Poodle / Cocker Spaniel",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Lady",
+    "age": "6",
+    "species": "Dog",
+    "gender": "Female",
+    "Breed": "Sheltie mix",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Jackson",
+    "age": "5",
+    "species": "Dog",
+    "gender": "Male",
+    "Breed": "Labradoodle",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Tesla",
+    "age": "2",
+    "species": "Dog",
+    "gender": "Female",
+    "Breed": "Corgi",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Cocotte",
+    "age": "unknown",
+    "species": "Bird",
+    "gender": "Female",
+    "Breed": "Lovebird",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Woodstock",
+    "age": "5",
+    "species": "Bird",
+    "gender": "Male",
+    "Breed": "Parrot/Budgerigar Mix",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Bear",
+    "age": "25",
+    "species": "Bird",
+    "gender": "Male",
+    "Breed": "Amazon Perret",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Peanut",
+    "age": "1",
+    "species": "Rabbit",
+    "gender": "Male",
+    "Breed": "Bunny Rabbit",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Sheena",
+    "age": "1",
+    "species": "Rabbit",
+    "gender": "Male",
+    "Breed": "Bunny Rabbit",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Albine",
+    "age": "4",
+    "species": "Rabbit",
+    "gender": "Female",
+    "Breed": "Lionhead",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Levi",
+    "age": "3",
+    "species": "Rabbit",
+    "gender": "Male",
+    "Breed": "Lionhead",
+    "avatarSrc": ""
+  },
+  {
+    "name": "Basil",
+    "age": "1",
+    "species": "Rabbit",
+    "gender": "Female",
+    "Breed": "Bunny Rabbit Mix",
+    "avatarSrc": ""
   }
 ]
