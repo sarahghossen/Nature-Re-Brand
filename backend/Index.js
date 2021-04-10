@@ -2,8 +2,9 @@
 
 const express = require("express");
 const morgan = require("morgan");
+const { getAllPets } = require("./handlers.js");
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 express()
   .use(morgan("tiny"))
@@ -12,11 +13,11 @@ express()
   .use(express.urlencoded({ extended: false }))
   .use("/", express.static(__dirname + "/"))
 
-  // .get("*", (req, res) => {
-  //   res.status(404).json({
-  //     status: 404,
-  //     message: "This is obviously not what you are looking for.",
-  //   });
-  // })
+  //endpoints
+  .get("/adoption", getAllPets)
+  // .get("/adoption/:species", getSpecificSpeciesOfPets)
+  // .get("/adoption/:species/:_id", getPet)
 
-  .listen(PORT, () => console.info(`Listening on port ${PORT}`));
+  .use((req, res) => res.status(404).type("txt").send("🤷‍♂️"))
+
+  .listen(PORT, () => console.log(`Listening on port ${PORT}`));
