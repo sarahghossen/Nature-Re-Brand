@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import styled from "styled-components";
 import GenerateAllPets from "./AdoptionPage/GenerateAllPets";
+import Homepage from "./Homepage";
 
 const App = () => {
   return (
@@ -14,7 +15,9 @@ const App = () => {
       {/* <GlobalStyles /> */}
       <Router>
         <Switch>
-          <Route exact path="/"></Route>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
           <Route exact path="/adoption">
             <GenerateAllPets />
           </Route>

@@ -6,6 +6,7 @@ const initialState = {
 };
 
 export default function petReducer(state = initialState, action) {
+  console.log(action);
   switch (action.type) {
     case "REQUEST_PET_INFO": {
       return {
@@ -16,9 +17,7 @@ export default function petReducer(state = initialState, action) {
     case "RECEIVE_PET_INFO": {
       return {
         status: "idle",
-        pets: {
-          data: action,
-        },
+        pets: action.pets.data,
       };
     }
     case "RECEIVE_PET_INFO_ERROR": {
@@ -33,4 +32,4 @@ export default function petReducer(state = initialState, action) {
   }
 }
 
-export const getPetDataArray = (state) => Object.values(state);
+export const getPetDataArray = (state) => state.pets;
