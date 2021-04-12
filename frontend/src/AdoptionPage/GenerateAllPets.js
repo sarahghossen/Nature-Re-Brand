@@ -33,7 +33,16 @@ const GenerateAllPets = () => {
   return petData ? (
     <div>
       {petData?.pets?.map((data) => {
-        return <AllPets name={data.name} />;
+        return (
+          <AllPets
+            avatarSrc={data.avatarSrc}
+            name={data.name}
+            species={data.species}
+            gender={data.gender}
+            age={data.age}
+            id={data._id}
+          />
+        );
       })}
     </div>
   ) : (

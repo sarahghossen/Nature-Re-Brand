@@ -8,7 +8,6 @@ const {
   getPet,
   bookAppointment,
 } = require("./handlers.js");
-
 const PORT = process.env.PORT || 4000;
 
 express()
