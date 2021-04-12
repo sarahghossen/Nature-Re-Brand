@@ -1,210 +1,282 @@
 [
   {
+    "_id": "01",
     "name": "Charlie",
     "age": "8",
     "species": "Cat",
     "gender": "Male",
     "Breed": "Domestic",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Charlie_cat_pic1.jpg",
+    "secondImg": "/assets/Charlie_cat_pic2.jpg"
   },
   {
+    "_id": "02",
     "name": "Stella",
     "age": "9",
     "species": "Cat",
     "gender": "Female",
     "Breed": "Domestic",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Stella_cat_pic1.jpg",
+    "secondImg": "/assets/Stella_cat_pic2.jpg"
   },
   {
+    "_id": "03",
     "name": "Cyril",
     "age": "7",
     "species": "Cat",
     "gender": "Male",
     "Breed": "Domestic",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Cyril_cat_pic1.png",
+    "secondImg": "/assets/Cyril_cat_pic2.png"
   },
   {
+    "_id": "04",
     "name": "Fatty",
     "age": "5",
     "species": "Cat",
     "gender": "Male",
     "Breed": "Domestic",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Fatty_cat_pic1.jpg",
+    "secondImg": "/assets/Fatty_cat_pic2.jpg"
   },
   {
+    "_id": "05",
     "name": "Misty",
     "age": "6",
     "species": "Cat",
     "gender": "Male",
     "Breed": "Domestic",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Misty_cat_pic1.jpg",
+    "secondImg": "/assets/Misty_cat_pic2.jpg"
   },
   {
+    "_id": "06",
     "name": "Cloudy",
     "age": "7",
     "species": "Cat",
     "gender": "Female",
     "Breed": "Domestic",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Cloudy_cat_pic1.jpg",
+    "secondImg": "/assets/Cloudy_cat_pic2.jpg"
   },
   {
+    "_id": "07",
     "name": "Silverpelt",
     "age": "2",
     "species": "Cat",
     "gender": "Male",
     "Breed": "Domestic",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Silverpelt_cat_pic1.jpg",
+    "secondImg": "/assets/Silverpelt_cat_pic2.jpg"
   },
   {
+    "_id": "08",
     "name": "Luna",
     "age": "4",
     "species": "Cat",
     "gender": "Female",
     "Breed": "Domestic",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Luna_cat_pic1.jpg",
+    "secondImg": "/assets/Luna_cat_pic2.jpg"
   },
   {
+    "_id": "09",
     "name": "Takoda",
     "age": "1",
     "species": "Cat",
     "gender": "Male",
     "Breed": "Siamese",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Takoda_cat_pic1.jpg",
+    "secondImg": "/assets/Takoda_cat_pic2.jpg"
   },
   {
+    "_id": "10",
     "name": "Leïa",
     "age": "4",
     "species": "Cat",
     "gender": "Female",
     "Breed": "Domestic",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Leia_cat_pic1.jpg",
+    "secondImg": "/assets/Leia_cat_pic2.jpg"
   },
   {
+    "_id": "11",
     "name": "Sif",
     "age": "4",
     "species": "Dog",
     "gender": "Female",
     "Breed": "Pit bull/ lab",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Sif_dog_pic1.png",
+    "secondImg": "/assets/Sif_dog_pic2.png"
   },
   {
+    "_id": "12",
     "name": "Winston",
     "age": "5",
     "species": "Dog",
     "gender": "Male",
     "Breed": "Golden Retriever",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Winston_dog_pic1.jpg",
+    "secondImg": "/assets/Winston_dog_pic2.jpg"
   },
   {
+    "_id": "13",
     "name": "Snooky",
     "age": "9",
     "species": "Dog",
     "gender": "Male",
     "Breed": "Brittany Spaniel",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Snooky_dog_pic1.JPG",
+    "secondImg": "/assets/Snooky_dog_pic2.jpg"
   },
   {
+    "_id": "14",
     "name": "Sokka",
     "age": "1",
     "species": "Dog",
     "gender": "Male",
     "Breed": "Husky",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Sokka_dog_pic1.jpg",
+    "secondImg": "/assets/Sokka_dog_pic2.jpg"
   },
   {
+    "_id": "15",
     "name": "Archie",
     "age": "1",
     "species": "Dog",
     "gender": "Male",
     "Breed": "Poodle / Cocker Spaniel",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Archie_dog_pic1.jpg",
+    "secondImg": "/assets/Archie_dog_pic2.jpg"
   },
   {
+    "_id": "16",
     "name": "Lady",
     "age": "6",
     "species": "Dog",
     "gender": "Female",
     "Breed": "Sheltie mix",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Lady_dog_pic1.jpg",
+    "secondImg": "/assets/Lady_dog_pic2.jpg"
   },
   {
+    "_id": "17",
     "name": "Jackson",
     "age": "5",
     "species": "Dog",
     "gender": "Male",
     "Breed": "Labradoodle",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Jackson_dog_pic1.jpg",
+    "secondImg": "/assets/Jackson_dog_pic2.jpg"
   },
   {
+    "_id": "18",
     "name": "Tesla",
     "age": "2",
     "species": "Dog",
     "gender": "Female",
     "Breed": "Corgi",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Tesla_dog_pic1.jpg",
+    "secondImg": "/assets/Tesla_dog_pic2.jpg"
   },
   {
+    "_id": "19",
     "name": "Cocotte",
     "age": "unknown",
     "species": "Bird",
     "gender": "Female",
     "Breed": "Lovebird",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Cocotte_bird_pic1.jpg",
+    "secondImg": "/assets/Cocotte_bird_pic2.jpg"
   },
   {
+    "_id": "20",
     "name": "Woodstock",
     "age": "5",
     "species": "Bird",
     "gender": "Male",
     "Breed": "Parrot/Budgerigar Mix",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Woodstock_bird_pic1.jpg",
+    "secondImg": "/assets/Woodstock_bird_pic2.jpg"
   },
   {
+    "_id": "21",
     "name": "Bear",
     "age": "25",
     "species": "Bird",
     "gender": "Male",
     "Breed": "Amazon Perret",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Bear_bird_pic1.jpg",
+    "secondImg": "/assets/Bear_bird_pic2.jpg"
   },
   {
+    "_id": "22",
+    "name": "Mr. Calypso",
+    "age": "10",
+    "species": "Bird",
+    "gender": "Male",
+    "Breed": "Cockatiel",
+    "avatarSrc": "/assets/Calypso_bird_pic1.jpg",
+    "secondImg": "/assets/Calypso_bird_pic2.jpg"
+  },
+  {
+    "_id": "23",
+    "name": "Mrs. Jasmine and Mrs. Jade",
+    "age": "4",
+    "species": "Bird",
+    "gender": "Female",
+    "Breed": "Concures",
+    "avatarSrc": "/assets/Jasmine&Jade_bird_pic1.jpg",
+    "secondImg": "/assets/Jasmine&Jade_bird_pic2.jpg"
+  },
+  {
+    "_id": "24",
     "name": "Peanut",
     "age": "1",
     "species": "Rabbit",
     "gender": "Male",
     "Breed": "Bunny Rabbit",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Peanut_rabbit_pic1.jpg",
+    "secondImg": "/assets/Peanut_rabbit_pic2.jpg"
   },
   {
+    "_id": "25",
     "name": "Sheena",
     "age": "1",
     "species": "Rabbit",
     "gender": "Male",
     "Breed": "Bunny Rabbit",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Sheena_rabbit_pic1.jpg",
+    "secondImg": "/assets/Sheena_rabbit_pic2.jpg"
   },
   {
+    "_id": "26",
     "name": "Albine",
     "age": "4",
     "species": "Rabbit",
     "gender": "Female",
     "Breed": "Lionhead",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Albine_rabbit_pic1.jpg",
+    "secondImg": "/assets/Albine_rabbit_pic2.jpg"
   },
   {
+    "_id": "27",
     "name": "Levi",
     "age": "3",
     "species": "Rabbit",
     "gender": "Male",
     "Breed": "Lionhead",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Levi_rabbit_pic1.jpg",
+    "secondImg": "/assets/Levi_rabbit_pic2.jpg"
   },
   {
+    "_id": "28",
     "name": "Basil",
     "age": "1",
     "species": "Rabbit",
     "gender": "Female",
     "Breed": "Bunny Rabbit Mix",
-    "avatarSrc": ""
+    "avatarSrc": "/assets/Basil_rabbit_pic1.jpg",
+    "secondImg": "/assets/Basil_rabbit_pic2.jpg"
   }
 ]
