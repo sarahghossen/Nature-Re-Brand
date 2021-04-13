@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
-const AdoptionPage = () => {
+const AdoptionBanner = () => {
   return (
     <>
       <p>top of adoption page</p>
@@ -9,4 +9,4 @@ const AdoptionPage = () => {
   );
 };
 
-export default AdoptionPage;
+export default AdoptionBanner;

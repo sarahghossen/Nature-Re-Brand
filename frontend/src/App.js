@@ -6,12 +6,11 @@ import {
   Redirect,
 } from "react-router-dom";
 import styled from "styled-components";
-import GenerateAllPets from "./AdoptionPage/GenerateAllPets";
+import AllPets from "./AdoptionPage/AllPets";
 import Homepage from "./Homepage";
 import Header from "./Header";
-import PetSpeciesPage from "./PetSpeciesPage";
-import AdoptionPage from "./AdoptionPage/AdoptionPage";
-import PetSpeciesButton from "./AdoptionPage/PetSpeciesButton";
+import AdoptionBanner from "./AdoptionPage/AdoptionBanner";
+import AdoptionButton from "./AdoptionPage/AdoptionButton";
 import SinglePetPage from "./AdoptionPage/SinglePetPage";
 
 const App = () => {
@@ -25,12 +24,14 @@ const App = () => {
             <Homepage />
           </Route>
           <Route exact path="/adoption">
-            <AdoptionPage />
-            <PetSpeciesButton />
-            <GenerateAllPets />
+            <AdoptionBanner />
+            <AdoptionButton />
+            <AllPets />
           </Route>
           <Route exact path="/adoption/:species">
-            <PetSpeciesPage />
+            <AdoptionBanner />
+            <AdoptionButton />
+            <AllPets />
           </Route>
           <Route exact path="/adoption/id/:id">
             <SinglePetPage />

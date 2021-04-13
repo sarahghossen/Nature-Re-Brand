@@ -1,22 +1,86 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import {
+  requestPetInfo,
+  receivePetInfo,
+  receivePetInfoError,
+} from "../actions";
+import Pet from "./Pet";
+import { getPetDataArray } from "../reducers/petReducer";
 // import AdoptionPage from "./AdoptionPage";
 
-const AllPets = ({ name, id, avatarSrc, gender, age }) => {
-  return (
+const AllPets = ({ petSpecies }) => {
+  const dispatch = useDispatch();
+  const petData = useSelector(getPetDataArray);
+  const [filteredPets, setFilteredPets] = useState([]);
+  console.log(petSpecies);
+
+  useEffect(() => {
+    dispatch(requestPetInfo());
+    fetch("/adoption")
+      .then((res) => res.json())
+      .then((json) => {
+        dispatch(receivePetInfo(json));
+      })
+      .catch((err) => {
+        console.log(err);
+        dispatch(receivePetInfoError());
+      });
+  }, []);
+
+  useEffect(() => {
+    fetch(`/adoption/${petSpecies}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setFilteredPets(data.data);
+        console.log("data", data.data);
+      });
+  }, [petSpecies]);
+
+  // if (petData) {
+  //   console.log("PETS DATA", petData);
+  // }
+  return petData && petSpecies === null ? (
     <>
       <div>
-        <Img src={avatarSrc} />
-        <p>{gender}</p>
-        <p>{age}</p>
-        <p>{name}</p>
+        {petData?.pets?.map((data) => {
+          return (
+            <>
+              <Pet
+                avatarSrc={data.avatarSrc}
+                name={data.name}
+                species={data.species}
+                gender={data.gender}
+                age={data.age}
+                id={data._id}
+              />
+            </>
+          );
+        })}
       </div>
     </>
+  ) : petSpecies ? (
+    <div>
+      {filteredPets.map((data) => {
+        return (
+          <>
+            <Pet
+              avatarSrc={data.avatarSrc}
+              name={data.name}
+              species={data.species}
+              gender={data.gender}
+              age={data.age}
+              id={data._id}
+            />
+          </>
+        );
+      })}
+    </div>
+  ) : (
+    <div>Loading...</div>
   );
 };
-
-const Img = styled.img`
-  width: 200px;
-`;
 
 export default AllPets;
