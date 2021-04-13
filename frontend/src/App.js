@@ -28,12 +28,7 @@ const App = () => {
             <AdoptionButton />
             <AllPets />
           </Route>
-          <Route exact path="/adoption/:species">
-            <AdoptionBanner />
-            <AdoptionButton />
-            <AllPets />
-          </Route>
-          <Route exact path="/adoption/id/:id">
+          <Route exact path="/adoption/:id">
             <SinglePetPage />
           </Route>
         </Switch>

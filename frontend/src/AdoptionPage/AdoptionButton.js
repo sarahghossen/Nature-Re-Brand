@@ -9,12 +9,10 @@ const AdoptionButton = () => {
   return petSpecies === "Cat" || "Dog" || "Bird" || "Rabbit" ? (
     <>
       <div>
-        {/* <Link to="adoption/"> */}
         <button onClick={() => setPetSpecies("Cat")}>Cats</button>
-        {/* </Link> */}
-        <button>Dogs</button>
-        <button>Birds</button>
-        <button>Rabbits</button>
+        <button onClick={() => setPetSpecies("Dog")}>Dogs</button>
+        <button onClick={() => setPetSpecies("Bird")}>Birds</button>
+        <button onClick={() => setPetSpecies("Rabbit")}>Rabbits</button>
         <AllPets petSpecies={petSpecies} />
       </div>
     </>
