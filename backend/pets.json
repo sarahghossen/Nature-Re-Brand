@@ -6,7 +6,7 @@
     "species": "Cat",
     "gender": "Male",
     "Breed": "Domestic",
-    "description": "Very playful and needs plenty of attention. He's  addicted to salmon and chicken. Prefers a family with no other cats.",
+    "description": "Very playful and needs plenty of attention. He's addicted to salmon and chicken. Prefers a family with no other cats.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249576/Charlie_cat_pic2_mctxib.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249576/Charlie_cat_pic1_mbzhkj.jpg"
   },
@@ -17,7 +17,7 @@
     "species": "Cat",
     "gender": "Female",
     "Breed": "Domestic",
-    "description": "A chubby, beautiful black and white cat who always wants you attention. Has seperation anxiety and dosen't like to be picked up ",
+    "description": "A beautiful black and white cat who always wants your attention. Has seperation anxiety and dosen't like to be picked up.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249610/Stella_cat_pic2_gdsgwl.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249611/Stella_cat_pic1_ciavpk.jpg"
   },
@@ -83,7 +83,7 @@
     "species": "Cat",
     "gender": "Female",
     "Breed": "Domestic",
-    "description": "A super sweet, talkative, playful, and quirky cat who loves watching birds on TV. Absolutely loves tuna",
+    "description": "A super sweet, talkative, playful, and quirky cat who loves watching birds on TV. Absolutely loves tuna.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249608/Luna_cat_pic1_csgxnn.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249614/Luna_cat_pic2_pekjay.jpg"
   },
@@ -94,7 +94,7 @@
     "species": "Cat",
     "gender": "Male",
     "Breed": "Siamese",
-    "description": "A sweet kitty who loves taking walks outside loves any type of boxes ",
+    "description": "A sweet kitty who loves taking walks outside. Loves going inside boxes.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249623/Takoda_cat_pic1_ysmxp6.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249623/Takoda_cat_pic2_stbwhd.jpg"
   },
@@ -105,7 +105,7 @@
     "species": "Cat",
     "gender": "Female",
     "Breed": "Domestic",
-    "description": "She's a very particular cat who loves cuddles and drinking water from the tap! Once you gain her trust she will always want attention.",
+    "description": "She's a very particular cat who loves cuddles and drinking water from the tap. Once you gain her trust she will always want attention.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249596/Leia_cat_pic1_rqssdq.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249602/Leia_cat_pic2_lpfwz4.jpg"
   },
@@ -116,7 +116,7 @@
     "species": "Cat",
     "gender": "Female",
     "Breed": "Domestic",
-    "description": "A very hyper and affectionate kitty who tuna and cuddles. ",
+    "description": "A very hyper and affectionate kitty who loves tuna and cuddles.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618266441/Miso_cat_pic2_xghocv.png",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618266443/Miso_cat_pic1_wqrkmc.png"
   },
@@ -127,7 +127,7 @@
     "species": "Dog",
     "gender": "Female",
     "Breed": "Pit bull/ lab",
-    "description": "A gentle girl who has big beautiful eyes that always guilt trips you into giving her snacks. She's very active and loves playing outside ",
+    "description": "A gentle girl who has big beautiful eyes that always guilt trips you into giving her treats. She's very active and loves playing outside.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249609/Sif_dog_pic2_rwywco.png",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249606/Sif_dog_pic1_p20yjh.png"
   },
@@ -138,7 +138,7 @@
     "species": "Dog",
     "gender": "Male",
     "Breed": "Golden Retriever",
-    "description": "Big goofy ball of love who loves munching on potatoes",
+    "description": "Big goofy ball of love who loves munching on potatoes.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249620/Winston_dog_pic1_w4bq06.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249620/Winston_dog_pic2_lvfmre.jpg"
   },
@@ -149,7 +149,7 @@
     "species": "Dog",
     "gender": "Male",
     "Breed": "Brittany Spaniel",
-    "description": "He's a rescue dog from the farm who loves to eat and play with the leaves. He would do anything to get treats and he's super cuddly. ",
+    "description": "He's a rescue dog from the farm who loves to eat and play with the leaves. He would do anything to get treats and he's super cuddly.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249619/Snooky_dog_pic2_wck9c7.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249605/Snooky_dog_pic1_sjj7uk.jpg"
   },
@@ -160,7 +160,7 @@
     "species": "Dog",
     "gender": "Male",
     "Breed": "Husky",
-    "description": "A very observant and calm puppy that thrives on attempting to catch birds and squirrels, and arguing back to you when he's displeased. You will likely be roped in by his adorable appearance and soft fur, and will learn to deal with him when he wrecks havoc on his toys. He also really likes to eat.",
+    "description": "A very observant and calm puppy that thrives on attempting to catch birds and squirrels, and arguing back to you when he's displeased. You will likely be pulled in by his adorable appearance and soft fur, and will learn to deal with him when he wrecks havoc on his toys. He also really likes to eat.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249619/Sokka_dog_pic1_qqkddj.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249605/Snooky_dog_pic1_sjj7uk.jpg"
   },
@@ -171,7 +171,7 @@
     "species": "Dog",
     "gender": "Male",
     "Breed": "Poodle / Cocker Spaniel",
-    "description": "A very playful and loving dog, but timid with other dogs. Constantly wants to be around people. But can be extremely stubborn when he wants to be.",
+    "description": "A very playful and loving dog, but timid with other dogs. Constantly wants to be around people, but can be extremely stubborn when he wants to be.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249593/Archie_dog_pic1_moripm.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249601/Archie_dog_pic2_oukwda.jpg"
   },
@@ -204,7 +204,7 @@
     "species": "Dog",
     "gender": "Female",
     "Breed": "Corgi",
-    "description": "Very sweet and clingy dog. She's very active and loves the snow. ",
+    "description": "A very sweet and clingy dog. She's very active and loves the snow.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249619/Tesla_dog_pic1_lwhxux.png",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249620/Tesla_dog_pic2_a3bvgx.jpg"
   },
@@ -226,7 +226,7 @@
     "species": "Bird",
     "gender": "Male",
     "Breed": "Parrot/Budgerigar Mix",
-    "description": "Gentle and very energetic bird who likes to be in his own bubble. ",
+    "description": "Gentle and very energetic bird who likes to be in his own bubble.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249621/Woodtock_bird_pic1_qzxoc6.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249575/Woodtock_bird_pic2_nl9yya.jpg"
   },
@@ -237,7 +237,7 @@
     "species": "Bird",
     "gender": "Male",
     "Breed": "Amazon Perret",
-    "description": "Very outgoing and energetic. Loves to sing and dance. Very king like personality",
+    "description": "Very outgoing and energetic. Loves to sing and dance. Very king like personality.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249575/Bear_bird_pic1_g2nv6c.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249575/Bear_bird_pic2_cpjffi.jpg"
   },
@@ -248,7 +248,7 @@
     "species": "Bird",
     "gender": "Male",
     "Breed": "Cockatiel",
-    "description": "A very affectionate bird who enjoys your company and likes to be petted. ",
+    "description": "A very overprotected bird who loves to be the loudest in the room and has lots of energy. He loves to sing hello to guests.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249588/Calypso_bird_pic1_jsgy8z.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249581/Calypso_bird_pic2_wojdzq.png"
   },
@@ -259,7 +259,7 @@
     "species": "Bird",
     "gender": "Female",
     "Breed": "Concures",
-    "description": "These two goofballs are inseparable and have big personalitites. They are very curious and loves to be around you.",
+    "description": "They're both very timid and insperable. Jasmine loves to keep to herself and Jade is very affectionate,loves humans and is very clingy.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249601/Jasmine_Jade_bird_pic2_mouw1g.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249595/Jasmine_Jade_bird_pic1_vvksnh.jpg"
   },
@@ -270,7 +270,7 @@
     "species": "Rabbit",
     "gender": "Male",
     "Breed": "Bunny Rabbit",
-    "description": "This young bunny is very curious and loves to climb all over the place. He gets along well with cats. ",
+    "description": "This young bunny is very curious and loves to climb all over the place. He gets along well with cats.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249603/Peanut_rabbit_pic2_hbpslm.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249602/Peanut_rabbit_pic1_yetjon.jpg"
   },
@@ -281,7 +281,7 @@
     "species": "Rabbit",
     "gender": "Male",
     "Breed": "Bunny Rabbit",
-    "description": "He's a very sociable bunny who's very curious and active. He's very clean and tidy. Loves cats. ",
+    "description": "He's a very sociable bunny who's very curious and active. He's very clean and tidy. Loves cats.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249603/Sheena_rabbit_pic1_j6hxck.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249603/Sheena_rabbit_pic2_wdner9.jpg"
   },
@@ -292,7 +292,7 @@
     "species": "Rabbit",
     "gender": "Female",
     "Breed": "Lionhead",
-    "description": " She's a very affectionate rabbit with lots of character. She loves cardboard boxes and cats.",
+    "description": "She's a very affectionate rabbit with lots of character. She loves cardboard boxes and cats.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249574/Albine_rabbit_pic1_l7vz0l.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249575/Albine_rabbit_pic2_eis986.jpg"
   },
@@ -314,7 +314,7 @@
     "species": "Rabbit",
     "gender": "Female",
     "Breed": "Bunny Rabbit Mix",
-    "description": "She's a very energetic and sweet rabbit who loves to explore and is constantly curious. Once she gets to know you, she will become very affectionate. ",
+    "description": "She's a very energetic and sweet rabbit who loves to explore and is constantly curious. Once she gets to know you, she will become very affectionate.",
     "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249574/Basil_rabbit_pic1_wm3ihd.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249575/Basil_rabbit_pic2_d1z2uh.jpg"
   }
