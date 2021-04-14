@@ -49,6 +49,7 @@ const AllPets = ({ petSpecies }) => {
           return (
             <>
               <Pet
+                key={data._id}
                 avatarSrc={data.avatarSrc}
                 name={data.name}
                 species={data.species}
@@ -67,6 +68,7 @@ const AllPets = ({ petSpecies }) => {
         return (
           <>
             <Pet
+              key={data._id}
               avatarSrc={data.avatarSrc}
               name={data.name}
               species={data.species}

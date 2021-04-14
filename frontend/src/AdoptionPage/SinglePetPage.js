@@ -2,18 +2,20 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useParams, Link } from "react-router-dom";
 import Popup from "reactjs-popup";
-import Booking from "../Booking";
+import Booking from "../Booking/Booking";
 
 const SinglePetPage = () => {
   const [petId, setPetId] = useState(undefined);
   let { id } = useParams();
 
   useEffect(() => {
-    fetch("/adoption/id/" + id)
-      .then((res) => res.json())
-      .then((data) => {
-        setPetId(data.data);
-      });
+    if (id) {
+      fetch(`/adoption/id/${id}`)
+        .then((res) => res.json())
+        .then((data) => {
+          setPetId(data.data);
+        });
+    }
   }, [id]);
 
   return petId ? (

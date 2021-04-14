@@ -1,4 +1,4 @@
-// const assert = require("assert");
+const assert = require("assert");
 const { MongoClient } = require("mongodb");
 
 require("dotenv").config();
@@ -52,31 +52,23 @@ const getPet = async (req, res) => {
 };
 
 const bookAppointment = async (req, res) => {
-  const query = { _id: req.body._id };
-  const newValues = {
-    $set: {
-      isBooked: true,
-      fullName: req.body.fullName,
-      email: req.body.email,
-    },
-  };
+  const client = await MongoClient(MONGO_URI, options);
+  // console.log(req.body);
+
   try {
-    const client = await MongoClient(MONGO_URI, options);
     await client.connect();
     const db = client.db("pet_data");
-    await db.collection("pets").updateOne(query, newValues);
-
-    return res.status(200).json({
-      status: 200,
-      success: true,
-      newValues,
-    });
+    await db.collection("appointments").insertOne(req.body);
+    const result = await db.collection("appointments").find().toArray();
+    res.status(201).json({ status: 201, data: result });
   } catch (err) {
-    res.status(400).json({
-      status: 400,
-      msg: "can't find data",
-    });
+    console.log(err.stack);
+
+    res.status(500).json({ status: 500, data: req.body, msg: "error" });
   }
+  client.close();
+
+  client.close();
 };
 
 module.exports = {
