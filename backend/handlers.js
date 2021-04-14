@@ -51,7 +51,33 @@ const getPet = async (req, res) => {
   });
 };
 
-const bookAppointment = async (req, res) => {};
+const bookAppointment = async (req, res) => {
+  const query = { _id: req.body._id };
+  const newValues = {
+    $set: {
+      isBooked: true,
+      fullName: req.body.fullName,
+      email: req.body.email,
+    },
+  };
+  try {
+    const client = await MongoClient(MONGO_URI, options);
+    await client.connect();
+    const db = client.db("pet_data");
+    await db.collection("pets").updateOne(query, newValues);
+
+    return res.status(200).json({
+      status: 200,
+      success: true,
+      newValues,
+    });
+  } catch (err) {
+    res.status(400).json({
+      status: 400,
+      msg: "can't find data",
+    });
+  }
+};
 
 module.exports = {
   getAllPets,

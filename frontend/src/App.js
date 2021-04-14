@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,23 +12,31 @@ import Header from "./Header";
 import AdoptionBanner from "./AdoptionPage/AdoptionBanner";
 import AdoptionButton from "./AdoptionPage/AdoptionButton";
 import SinglePetPage from "./AdoptionPage/SinglePetPage";
+import GlobalStyles from "./GlobalStyles";
 
 const App = () => {
+  const [petSpecies, setPetSpecies] = useState(null);
+
   return (
     <>
-      {/* <GlobalStyles /> */}
+      <GlobalStyles />
       <Router>
-        <Header />
+        <Header setPetSpecies={setPetSpecies} />
         <Switch>
           <Route exact path="/">
             <Homepage />
           </Route>
           <Route exact path="/adoption">
             <AdoptionBanner />
-            <AdoptionButton />
+            <AdoptionButton
+              petSpecies={petSpecies}
+              setPetSpecies={setPetSpecies}
+            />
             <AllPets />
           </Route>
           <Route exact path="/adoption/:id">
+            <AdoptionBanner />
+            {/* <AdoptionButton /> */}
             <SinglePetPage />
           </Route>
         </Switch>

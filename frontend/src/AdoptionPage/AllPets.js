@@ -15,7 +15,7 @@ const AllPets = ({ petSpecies }) => {
   const dispatch = useDispatch();
   const petData = useSelector(getPetDataArray);
   const [filteredPets, setFilteredPets] = useState([]);
-  console.log(petSpecies);
+  // console.log(petSpecies);
 
   useEffect(() => {
     dispatch(requestPetInfo());
@@ -35,7 +35,7 @@ const AllPets = ({ petSpecies }) => {
       .then((res) => res.json())
       .then((data) => {
         setFilteredPets(data.data);
-        console.log("data", data.data);
+        // console.log("data", data.data);
       });
   }, [petSpecies]);
 

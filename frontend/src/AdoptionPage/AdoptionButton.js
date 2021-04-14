@@ -3,9 +3,7 @@ import styled from "styled-components";
 import { useParams, Link } from "react-router-dom";
 import AllPets from "./AllPets";
 
-const AdoptionButton = () => {
-  const [petSpecies, setPetSpecies] = useState(null);
-
+const AdoptionButton = ({ petSpecies, setPetSpecies }) => {
   return petSpecies === "Cat" || "Dog" || "Bird" || "Rabbit" ? (
     <>
       <div>
