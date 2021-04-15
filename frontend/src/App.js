@@ -13,7 +13,9 @@ import AdoptionBanner from "./AdoptionPage/AdoptionBanner";
 import AdoptionButton from "./AdoptionPage/AdoptionButton";
 import SinglePetPage from "./AdoptionPage/SinglePetPage";
 import GlobalStyles from "./GlobalStyles";
-
+import Footer from "./Footer";
+import AboutUs from "./AboutUs";
+import ContactUs from "./ContactUs";
 const App = () => {
   const [petSpecies, setPetSpecies] = useState(null);
 
@@ -26,6 +28,9 @@ const App = () => {
           <Route exact path="/">
             <Homepage />
           </Route>
+          <Route exact path="/about-us">
+            <AboutUs />
+          </Route>
           <Route exact path="/adoption">
             <AdoptionBanner />
             <AdoptionButton
@@ -36,10 +41,13 @@ const App = () => {
           </Route>
           <Route exact path="/adoption/:id">
             <AdoptionBanner />
-            {/* <AdoptionButton /> */}
             <SinglePetPage />
           </Route>
+          <Route exact path="/contact-us">
+            <ContactUs />
+          </Route>
         </Switch>
+        <Footer />
       </Router>
     </>
   );

@@ -21,6 +21,7 @@ const Booking = () => {
   const handleChange = (ev) => {
     setBookingData({ ...bookingData, [ev.target.name]: ev.target.value });
     setErrMessage("");
+    console.log([ev.target.name]);
   };
 
   const handleSubmit = (ev) => {

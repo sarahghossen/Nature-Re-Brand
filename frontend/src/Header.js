@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = ({ setPetSpecies }) => {
   return (
     <div>
       <Link to="/">Home</Link>
-      <Link>About Us</Link>
+      <Link to="/about-us">About Us</Link>
       <Link onClick={() => setPetSpecies(null)} to="/adoption">
         Adoption
       </Link>
-      <Link>Contact Us</Link>
+      <Link to="contact-us">Contact Us</Link>
     </div>
   );
 };
