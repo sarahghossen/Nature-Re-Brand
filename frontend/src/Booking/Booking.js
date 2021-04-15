@@ -6,6 +6,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ErrorMsg from "./ErrorMsg";
 import ConfirmationMsg from "./ConfirmationMsg";
+import { errorMessages } from "./errorMessages";
 
 const Booking = () => {
   const [startDate, setStartDate] = useState(null);
@@ -14,13 +15,12 @@ const Booking = () => {
   const [disabled, setDisabled] = useState(true);
   const [success, setSuccess] = useState(false);
   const [subStatus, setSubStatus] = useState("idle");
-  const errorMsg = "Error";
+  const [errMessage, setErrMessage] = useState("");
   const successMsg = "Success";
-
-  //   console.log(bookingData);
 
   const handleChange = (ev) => {
     setBookingData({ ...bookingData, [ev.target.name]: ev.target.value });
+    setErrMessage("");
   };
 
   const handleSubmit = (ev) => {
@@ -36,19 +36,20 @@ const Booking = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        const { status } = data;
-        if (status === 201) {
+        const { status, error } = data;
+        if (status === "success") {
           setSuccess(true);
-          setSubStatus(successMsg);
+          setSubStatus("confirmed");
           console.log(successMsg);
-        } else {
-          setSubStatus(errorMsg);
-          console.log(errorMsg);
+        } else if (error) {
+          setSubStatus("error");
+          setErrMessage(errorMessages[error]);
+          console.log(errorMessages[error]);
         }
       });
   };
 
-  return subStatus !== "Success" ? (
+  return subStatus !== "confirmed" ? (
     <BookingDiv>
       <h1>Form</h1>
       <form onChange={(ev) => handleChange(ev)} disabled={disabled}>
@@ -99,7 +100,7 @@ const Booking = () => {
         </label>
         <button onClick={handleSubmit}>Submit</button>
       </form>
-      {subStatus === "Error" && <ErrorMsg>{errorMsg}</ErrorMsg>}
+      {subStatus === "error" && <ErrorMsg>{errMessage}</ErrorMsg>}
     </BookingDiv>
   ) : (
     <ConfirmationMsg bookingData={bookingData} />

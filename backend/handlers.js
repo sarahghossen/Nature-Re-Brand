@@ -53,21 +53,45 @@ const getPet = async (req, res) => {
 
 const bookAppointment = async (req, res) => {
   const client = await MongoClient(MONGO_URI, options);
-  // console.log(req.body);
+  const email = req.body.Email;
+  console.log(Object.values(req.body));
 
   try {
     await client.connect();
     const db = client.db("pet_data");
+
+    const emailExisting = await db
+      .collection("appointments")
+      .findOne({ Email: email });
+
     await db.collection("appointments").insertOne(req.body);
     const result = await db.collection("appointments").find().toArray();
-    res.status(201).json({ status: 201, data: result });
+
+    if (req.body.Email.includes("@") === false) {
+      return res.status(200).json({
+        status: "error",
+        error: "invalid-email",
+        data: result,
+      });
+    } else if (Object.values(req.body) === "") {
+      return res.status(200).json({
+        status: "error",
+        error: "missing-data",
+        data: result,
+      });
+    } else if (emailExisting) {
+      return res.status(200).json({
+        status: "error",
+        error: "used-email",
+        data: result,
+      });
+    } else {
+      res.status(201).json({ status: "success", data: result });
+    }
   } catch (err) {
     console.log(err.stack);
-
     res.status(500).json({ status: 500, data: req.body, msg: "error" });
   }
-  client.close();
-
   client.close();
 };
 
