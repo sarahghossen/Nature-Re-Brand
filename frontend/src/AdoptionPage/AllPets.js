@@ -64,6 +64,7 @@ const AllPets = ({ petSpecies }) => {
     </>
   ) : petSpecies ? (
     <div>
+      <h1>{filteredPets.length + " " + petSpecies}</h1>
       {filteredPets.map((data) => {
         return (
           <>

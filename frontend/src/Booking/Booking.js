@@ -11,17 +11,38 @@ import { errorMessages } from "./errorMessages";
 const Booking = () => {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
-  const [bookingData, setBookingData] = useState("");
+  const [bookingData, setBookingData] = useState({
+    fullName: "",
+    Email: "",
+    phoneNumber: "",
+    Address: "",
+    City: "",
+    Province: "",
+    postalCode: "",
+    Date: "",
+    Children: "",
+    Animals: "",
+  });
   const [disabled, setDisabled] = useState(true);
   const [success, setSuccess] = useState(false);
   const [subStatus, setSubStatus] = useState("idle");
   const [errMessage, setErrMessage] = useState("");
   const successMsg = "Success";
+  let checkDisabled =
+    bookingData.fullName === "" ||
+    bookingData.Email === "" ||
+    bookingData.phoneNumber === "" ||
+    bookingData.Address === "" ||
+    bookingData.City === "" ||
+    bookingData.Province === "" ||
+    bookingData.postalCode === "" ||
+    bookingData.Date === "" ||
+    bookingData.Children === "" ||
+    bookingData.Animals === "";
 
   const handleChange = (ev) => {
     setBookingData({ ...bookingData, [ev.target.name]: ev.target.value });
     setErrMessage("");
-    console.log([ev.target.name]);
   };
 
   const handleSubmit = (ev) => {
@@ -78,8 +99,10 @@ const Booking = () => {
           startDate={startDate}
           endDate={endDate}
           minDate={startDate}
-          onChange={(date) => setEndDate(date)}
-          name="Date"
+          onChange={(date) => {
+            setEndDate(date);
+            setBookingData({ ...bookingData, Date: date });
+          }}
         />
         <p>Are there any children living in your home?</p>
         <label>
@@ -99,7 +122,9 @@ const Booking = () => {
           <input type="radio" value="no" name="Animals" />
           No
         </label>
-        <button onClick={handleSubmit}>Submit</button>
+        <button disabled={checkDisabled} onClick={handleSubmit}>
+          Submit
+        </button>
       </form>
       {subStatus === "error" && <ErrorMsg>{errMessage}</ErrorMsg>}
     </BookingDiv>

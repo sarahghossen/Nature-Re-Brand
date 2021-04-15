@@ -73,12 +73,6 @@ const bookAppointment = async (req, res) => {
         error: "invalid-email",
         data: result,
       });
-    } else if (Object.values(req.body) === "") {
-      return res.status(200).json({
-        status: "error",
-        error: "missing-data",
-        data: result,
-      });
     } else if (emailExisting) {
       return res.status(200).json({
         status: "error",
