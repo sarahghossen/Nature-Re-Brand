@@ -1,26 +1,28 @@
 const initialState = {
-  id: "",
-  userName: "",
-  email: "",
-  password: "",
-  isSignedIn: false,
+  user: null,
+  // id: "",
+  // userName: "",
+  // email: "",
+  // password: "",
+  // isSignedIn: false,
 };
 
 export default function signIn(state = initialState, action) {
+  console.log(action);
   switch (action.type) {
     case "SIGN_IN":
       return {
-        ...state,
-        ...action.user,
-        isSignedIn: true,
+        // ...state,
+        user: action.user,
+        // isSignedIn: true,
       };
 
     case "SIGN_OUT":
-      return { ...state, email: "", password: "", isSignedIn: false };
+      return { user: null };
 
     default:
       return state;
   }
 }
 
-export const signInReducer = (state) => state.isSignedIn;
+// export const signInReducer = (state) => state.user;

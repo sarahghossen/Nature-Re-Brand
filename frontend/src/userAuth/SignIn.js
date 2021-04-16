@@ -1,48 +1,53 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import SignUp from "./SignUp";
+// import { useSelector, useDispatch } from "react-redux";
+// import SignUp from "./SignUp";
+// import { signIn } from "../actions";
 
-const SignIn = () => {
-  // const [success, setSuccess] = useState(false);
-  // const [subStatus, setSubStatus] = useState("idle");
-  // const [errMessage, setErrMessage] = useState("");
-  // const successMsg = "Success";
+const SignIn = ({ userData, setUserData }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  // const handleChange = (ev) => {
-  //   setUserData({ ...userData, [ev.target.name]: ev.target.value });
-  //   setErrMessage("");
-  // };
+  const handleSignIn = (e) => {
+    e.preventDefault();
 
-  // const handleSubmit = (ev) => {
-  //   ev.preventDefault();
-  //   setSubStatus("pending");
-
-  //   fetch("/users/login", {
-  //     method: "POST",
-  //     body: JSON.stringify(userData),
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       const { status, error } = data;
-  //       if (status === 201) {
-  //         setSuccess(true);
-  //       }
-  //     });
-  // };
+    fetch("/users/login", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.status === "success") {
+          setUserData(data.user);
+        } else {
+          return window.alert("user does not exist");
+        }
+      });
+  };
   return (
     <>
       <div>
         <form>
           <h1>Sign In</h1>
           <label>Email</label>
-          <input type="email" htmlFor="email" name="email" />
+          <input
+            type="email"
+            htmlFor="email"
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
           <label>Password</label>
-          <input type="password" name="password" />
-          <button>Login</button>
+          <input
+            type="password"
+            name="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button onClick={handleSignIn}>Login</button>
         </form>
       </div>
       <div>

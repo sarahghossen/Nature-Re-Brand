@@ -6,7 +6,7 @@ const initialState = {
 };
 
 export default function petReducer(state = initialState, action) {
-  console.log(action);
+  // console.log(action);
   switch (action.type) {
     case "REQUEST_PET_INFO": {
       return {

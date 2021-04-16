@@ -4,7 +4,7 @@ import styled from "styled-components";
 const SignInMessage = ({ userData }) => {
   return (
     <Wrapper>
-      <h1>Welcome {userData.userName}</h1>
+      <h1>Welcome {userData.name}</h1>
     </Wrapper>
   );
 };

@@ -33,11 +33,11 @@ const addUser = async (req, res) => {
     await client.connect();
     const db = client.db("pet_data");
     await db.collection("users").insertOne({
-      //   userName: req.body.userName,
+      name: req.body.name,
       email: req.body.email,
       password: hashedPassword,
-      //   isSignedIn: req.body.isSignedIn,
     });
+    console.log(req.body);
     const data = await db.collection("users").find().toArray();
 
     if (data) {
@@ -57,8 +57,10 @@ const userAuth = async (req, res) => {
     const user = await db.collection("users").findOne({
       email: req.body.email,
     });
+    console.log(req.body.email);
+    // res.status(201).json({ status: 201, user });
     if (await bcrypt.compare(req.body.password, user.password)) {
-      res.status(201).json({ status: "success" });
+      res.status(201).json({ status: "success", user });
     } else {
       res.status(201).json({ status: "not allowed" });
     }

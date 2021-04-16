@@ -7,8 +7,8 @@ import SignInMessage from "./SignInMessage";
 const SignUp = ({ userData, setUserData }) => {
   // const [confirmPasswordError, setConfirmPasswordError] = useState(false);
   const [subStatus, setSubStatus] = useState("idle");
-  const [success, setSuccess] = useState(false);
-  const successMsg = "Success";
+  // const [success, setSuccess] = useState(false);
+  // const successMsg = "Success";
 
   const handleChange = (ev) => {
     setUserData({ ...userData, [ev.target.name]: ev.target.value });
@@ -26,24 +26,18 @@ const SignUp = ({ userData, setUserData }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        const { status, error } = data;
-        if (status === 201) {
-          setSuccess(true);
+        if (data.status === 201) {
           setSubStatus("success");
-          console.log(successMsg);
-        } else if (error) {
-          setSubStatus("error");
-          // setErrMessage(errorMessages[error]);
         }
       });
   };
 
-  return subStatus !== "success" ? (
+  return (
     <div>
       <form onChange={(ev) => handleChange(ev)}>
         <h1>Sign Up</h1>
-        <label>User Name</label>
-        <input type="text" htmlFor="userName" name="userName" />
+        <label>Name</label>
+        <input type="text" htmlFor="userName" name="name" />
         <label>Email</label>
         <input type="email" htmlFor="email" name="email" />
         <label>Password</label>
@@ -52,10 +46,6 @@ const SignUp = ({ userData, setUserData }) => {
       </form>
       <div></div>
     </div>
-  ) : (
-    <>
-      <SignInMessage userData={userData} />
-    </>
   );
 };
 

@@ -20,12 +20,8 @@ import SignIn from "./userAuth/SignIn";
 import SignUp from "./userAuth/SignUp";
 const App = () => {
   const [petSpecies, setPetSpecies] = useState(null);
-  const [userData, setUserData] = useState({
-    userName: "",
-    email: "",
-    password: "",
-  });
-  const [isSignedIn, setIsSignedIn] = useState(false);
+  const [userData, setUserData] = useState(null);
+  console.log(userData);
 
   return (
     <>
@@ -34,8 +30,7 @@ const App = () => {
         <Header
           setPetSpecies={setPetSpecies}
           userData={userData}
-          isSignedIn={isSignedIn}
-          setIsSignedIn={setIsSignedIn}
+          setUserData={setUserData}
         />
         <Switch>
           <Route exact path="/">
@@ -60,20 +55,18 @@ const App = () => {
             <ContactUs />
           </Route>
           <Route exact path="/sign-in">
-            <SignIn
-              userData={userData}
-              setUserData={setUserData}
-              isSignedIn={isSignedIn}
-              setIsSignedIn={setIsSignedIn}
-            />
+            {userData ? (
+              <Redirect to="/" />
+            ) : (
+              <SignIn userData={userData} setUserData={setUserData} />
+            )}
           </Route>
           <Route exact path="/sign-up">
-            <SignUp
-              userData={userData}
-              setUserData={setUserData}
-              isSignedIn={isSignedIn}
-              setIsSignedIn={setIsSignedIn}
-            />
+            {userData ? (
+              <Redirect to="/" />
+            ) : (
+              <SignUp userData={userData} setUserData={setUserData} />
+            )}
           </Route>
         </Switch>
         <Footer />
