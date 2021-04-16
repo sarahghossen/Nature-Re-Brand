@@ -21,7 +21,7 @@ const SignIn = ({ userData, setUserData }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.status === "success") {
           setUserData(data.user);
         } else {

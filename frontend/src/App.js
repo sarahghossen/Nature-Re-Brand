@@ -21,7 +21,7 @@ import SignUp from "./userAuth/SignUp";
 const App = () => {
   const [petSpecies, setPetSpecies] = useState(null);
   const [userData, setUserData] = useState(null);
-  console.log(userData);
+  // console.log(userData);
 
   return (
     <>

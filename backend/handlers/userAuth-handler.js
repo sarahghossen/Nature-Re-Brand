@@ -37,8 +37,8 @@ const addUser = async (req, res) => {
       email: req.body.email,
       password: hashedPassword,
     });
-    console.log(req.body);
-    const data = await db.collection("users").find().toArray();
+    // console.log(req.body);
+    const data = await db.collection("users").findOne({ name: req.body.name });
 
     if (data) {
       res.status(201).json({ status: 201, data: data });
@@ -57,7 +57,7 @@ const userAuth = async (req, res) => {
     const user = await db.collection("users").findOne({
       email: req.body.email,
     });
-    console.log(req.body.email);
+    // console.log(req.body.email);
     // res.status(201).json({ status: 201, user });
     if (await bcrypt.compare(req.body.password, user.password)) {
       res.status(201).json({ status: "success", user });

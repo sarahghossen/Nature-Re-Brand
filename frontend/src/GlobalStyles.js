@@ -1,20 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
-  /* :root {
-      --primary-color: #5bb462;
-      --secondary-color: #111820;
-      --accent-bg-color: #D7ECEF;
-      --page-horizontal-padding: 20px;
-      --page-vertical-padding: 50px;
-      --header-height: 50px;
-      --max-content-width: 1200px;
-      --heading-font-family: 'Rubik', sans-serif;
-      --user-img-width: 120px;
-      --user-img-margin: 5px;
-      --nav-width: 250px;
-      --page-height: 100vh;
-    } */
+  :root {
+      --primary-color:#81c887;
+      --secondary-color: #4c764e;
+      --third-color: #19271a;
+    }
     *,
     *:before,
     *:after {
@@ -26,7 +17,7 @@ export default createGlobalStyle`
     input, button, select, option,
     h1, h2, h3, h4, h5, h6, p,
     text {
-        font-family: sans-serif;
+        font-family: 'Poppins',sans-serif;
     }
 
     html, body {
