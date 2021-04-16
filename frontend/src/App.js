@@ -16,14 +16,27 @@ import GlobalStyles from "./GlobalStyles";
 import Footer from "./Footer";
 import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
+import SignIn from "./userAuth/SignIn";
+import SignUp from "./userAuth/SignUp";
 const App = () => {
   const [petSpecies, setPetSpecies] = useState(null);
+  const [userData, setUserData] = useState({
+    userName: "",
+    email: "",
+    password: "",
+  });
+  const [isSignedIn, setIsSignedIn] = useState(false);
 
   return (
     <>
       <GlobalStyles />
       <Router>
-        <Header setPetSpecies={setPetSpecies} />
+        <Header
+          setPetSpecies={setPetSpecies}
+          userData={userData}
+          isSignedIn={isSignedIn}
+          setIsSignedIn={setIsSignedIn}
+        />
         <Switch>
           <Route exact path="/">
             <Homepage />
@@ -45,6 +58,22 @@ const App = () => {
           </Route>
           <Route exact path="/contact-us">
             <ContactUs />
+          </Route>
+          <Route exact path="/sign-in">
+            <SignIn
+              userData={userData}
+              setUserData={setUserData}
+              isSignedIn={isSignedIn}
+              setIsSignedIn={setIsSignedIn}
+            />
+          </Route>
+          <Route exact path="/sign-up">
+            <SignUp
+              userData={userData}
+              setUserData={setUserData}
+              isSignedIn={isSignedIn}
+              setIsSignedIn={setIsSignedIn}
+            />
           </Route>
         </Switch>
         <Footer />

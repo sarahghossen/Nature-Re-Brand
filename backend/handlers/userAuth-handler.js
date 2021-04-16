@@ -32,9 +32,12 @@ const addUser = async (req, res) => {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
     await client.connect();
     const db = client.db("pet_data");
-    await db
-      .collection("users")
-      .insertOne({ email: req.body.email, password: hashedPassword });
+    await db.collection("users").insertOne({
+      //   userName: req.body.userName,
+      email: req.body.email,
+      password: hashedPassword,
+      //   isSignedIn: req.body.isSignedIn,
+    });
     const data = await db.collection("users").find().toArray();
 
     if (data) {
@@ -47,16 +50,13 @@ const addUser = async (req, res) => {
 
 const userAuth = async (req, res) => {
   const client = await MongoClient(MONGO_URI, options);
-  //   const user = req.body.email === req.body.email;
-  //   if (user == null) {
-  //     res.status(400).json({ status: 400, msg: "can't find data" });
-  //   }
+
   try {
     await client.connect();
     const db = client.db("pet_data");
-    const user = await db
-      .collection("users")
-      .findOne({ email: req.body.email });
+    const user = await db.collection("users").findOne({
+      email: req.body.email,
+    });
     if (await bcrypt.compare(req.body.password, user.password)) {
       res.status(201).json({ status: "success" });
     } else {
