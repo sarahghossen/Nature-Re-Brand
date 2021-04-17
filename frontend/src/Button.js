@@ -3,16 +3,20 @@ import styled from "styled-components";
 
 const Button = styled.button`
   text-decoration: none;
+  display: inline-block;
   outline: none;
   border: 2px solid;
   border-color: (--primary-color);
   color: var(--primary-color);
-  /* background-color: var(--secondary-color); */
+  background-color: var(--secondary-color);
+  padding: 10px 17px 10px 17px;
+  margin-left: 30px;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
   cursor: pointer;
   &:hover {
-    /* border-color: (--accent-bg-color); */
-    /* color: var(--secondary-color);
-    background-color: var(--primary-color); */
+    box-shadow: inset 150px 0 0 0 var(--third-color);
   }
   &:disabled {
     color: white;
