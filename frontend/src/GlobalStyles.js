@@ -50,9 +50,9 @@ html, body, div, span, applet, object, iframe,
     footer, header, hgroup, menu, nav, section {
         display: block;
     }
-    body {
-        line-height: 2;
-    }
+    /* body {
+        line-height: ;
+    } */
     ol, ul {
         list-style: none;
     }

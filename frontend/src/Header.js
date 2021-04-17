@@ -64,7 +64,7 @@ const UserDataDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 7px;
   background-color: #4c764e;
   width: 100%;
 `;
@@ -87,16 +87,16 @@ const Welcome = styled.p`
 // `;
 
 const Logo = styled.img`
-  width: 250px;
+  width: 200px;
 `;
 const Icon = styled.img`
   width: 20px;
-  margin-left: 30px;
+  margin-left: 40px;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  margin-left: 30px;
+  margin-left: 40px;
   color: var(--primary-color);
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
@@ -115,7 +115,7 @@ const StyledSignIn = styled(Link)`
   border-color: (--primary-color);
   color: var(--primary-color);
   padding: 10px 17px 10px 17px;
-  margin-left: 30px;
+  margin-left: 40px;
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
