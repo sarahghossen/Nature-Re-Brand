@@ -1,39 +1,130 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const AboutUs = () => {
   return (
-    <div>
-      <h1>About Us</h1>
-      <p>
-        Since first opening our doors in 1985, Nature Pet Centers has always
-        been considered as leaders in the Pet Industry. As of September 2014, we
-        has decided to take a huge step forward and further our leadership
-        skills in being the first and only Pet Store chain in Quebec to stop
-        selling puppies and kittens. Our focus and initiatives are solely in
-        Rescue and Adoption and helping out the Shelters within our community
-        and abroad in finding homes for the thousands of unwanted and abandoned
-        pets. When adopting a Dog or Cat from Nature Pet Centers, you are not
-        just saving ''a'' life, you are giving a chance and opening the door to
-        many more. We want to be part of the solution, and adopting is one of
-        the best ways of helping, and end pet homelessness and abandonment. All
-        of our Dogs and Cats in adoption are also spayed and neutered because we
-        want to fight against pet overpopulation as well. Aside from Pet
-        Adoption, we offer Pet Grooming, as well as complete lines of products
-        not only for Dog and Cat lovers, but for the Small Animal, Bird, Reptile
-        and Fish enthusiasts. We pride ourselves in being Pet Experts with
-        passionate, skilled and dedicated staff. Our main goal is to find you
-        and your family exactly what you are looking for, a happy and healthy
-        pet, offer the best advice and care possible, in a warm and friendly
-        atmosphere. At Nature Pet Centers, we’re not just Animal Lovers…..
-      </p>
-      <p>
-        Are you ready to see our rescued cats available for adoption? They're
-        waiting for you!
-      </p>
-      <button>View Now</button>
-    </div>
+    <AboutDiv>
+      <H1Div>
+        <H1>About Us</H1>
+        <BigP>
+          W Since first opening our doors in 1985, Nature Pet Centers has always
+          been considered as leaders in the Pet Industry.
+        </BigP>
+      </H1Div>
+      <AboutDiv2>
+        <AboutUsDiv3>
+          <H2>Giving A Chance</H2>
+          <P>
+            As of September 2014, we has decided to take a huge step forward and
+            further our leadership skills in being the first and only Pet Store
+            chain in Quebec to stop selling puppies and kittens. Our focus and
+            initiatives are solely in Rescue and Adoption and helping out the
+            Shelters within our community and abroad in finding homes for the
+            thousands of unwanted and abandoned pets. When adopting a Dog or Cat
+            from Nature Pet Centers, you are not just saving ''a'' life, you are
+            giving a chance and opening the door to many more. We want to be
+            part of the solution, and adopting is one of the best ways of
+            helping, and end pet homelessness and abandonment. All of our Dogs
+            and Cats in adoption are also spayed and neutered because we want to
+            fight against pet overpopulation as well. Aside from Pet Adoption,
+            we offer Pet Grooming, as well as complete lines of products not
+            only for Dog and Cat lovers, but for the Small Animal, Bird, Reptile
+            and Fish enthusiasts. We pride ourselves in being Pet Experts with
+            passionate, skilled and dedicated staff. Our main goal is to find
+            you and your family exactly what you are looking for, a happy and
+            healthy pet, offer the best advice and care possible, in a warm and
+            friendly atmosphere. At Nature Pet Centers, we’re not just Animal
+            Lovers.
+          </P>
+          <P>
+            Are you ready to see our adorable animals available for adoption?
+            They're waiting for you!
+          </P>
+          <ViewButton>View Now</ViewButton>
+        </AboutUsDiv3>
+        <ImgDiv>
+          <Img src="images/birdBlob.png" />
+        </ImgDiv>
+      </AboutDiv2>
+    </AboutDiv>
   );
 };
+
+const AboutDiv = styled.div`
+  background-image: url("/images/AboutUs_header.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100%;
+`;
+
+const AboutDiv2 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+`;
+const AboutUsDiv3 = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+`;
+
+const H1Div = styled.div`
+  width: 35vw;
+  height: 80vh;
+  margin-left: 200px;
+  padding-top: 100px;
+`;
+
+const ImgDiv = styled.div``;
+
+const Img = styled.img`
+  width: 400px;
+`;
+
+const ViewButton = styled(Link)`
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  border: 2px solid;
+  width: 115px;
+  border-color: (--secondary-color);
+  color: var(--secondary-color);
+  padding: 8px 15px 8px 15px;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: inset 150px 0 0 0 var(--third-color);
+  }
+`;
+
+const P = styled.p`
+  color: var(--third-color);
+  font-size: 15px;
+  margin-bottom: 20px;
+`;
+
+const BigP = styled.p`
+  font-size: 17px;
+  color: var(--third-color);
+`;
+
+const H1 = styled.h1`
+  font-size: 70px;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+`;
+
+const H2 = styled.h1`
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+`;
 
 export default AboutUs;

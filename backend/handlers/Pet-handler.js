@@ -89,9 +89,26 @@ const bookAppointment = async (req, res) => {
   client.close();
 };
 
+const petSearch = async (req, res) => {
+  const client = await MongoClient(MONGO_URI, options);
+  console.log(req.body);
+
+  try {
+    await client.connect();
+
+    const db = client.db("pet_data");
+    const result = await db.collection("pets").find().toArray();
+
+    res.status(200).json({ status: 200, data: result });
+  } catch (err) {
+    res.status(404).json({ status: 404, data: "Not Found" });
+  }
+  client.close();
+};
+
 module.exports = {
   getAllPets,
   getSpecificSpeciesOfPets,
   getPet,
-  bookAppointment,
+  petSearch,
 };

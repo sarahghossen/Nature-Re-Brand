@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Button from "./Button";
+import SearchBar from "./SearchBar";
 
 const Header = ({ setPetSpecies, userData, setUserData }) => {
   const handleSignOut = () => {
@@ -81,10 +82,6 @@ const WelcomeDiv = styled.div`
 const Welcome = styled.p`
   color: var(--primary-color);
 `;
-
-// const BackgroundImg = styled.img`
-//   width: 100%;
-// `;
 
 const Logo = styled.img`
   width: 200px;

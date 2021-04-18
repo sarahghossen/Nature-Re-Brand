@@ -6,6 +6,7 @@ const {
   getAllPets,
   getSpecificSpeciesOfPets,
   getPet,
+  petSearch,
 } = require("./handlers/Pet-handler.js");
 const { bookAppointment } = require("./handlers/Booking-handler.js");
 const {
@@ -21,6 +22,7 @@ express()
   .use(express.json())
   .use(express.urlencoded({ extended: false }))
   .use("/", express.static(__dirname + "/"))
+  .use("/pets", petSearch)
 
   //endpoints
   .get("/adoption", getAllPets)

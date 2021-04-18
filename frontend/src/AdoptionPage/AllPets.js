@@ -9,6 +9,7 @@ import {
 } from "../actions";
 import Pet from "./Pet";
 import { getPetDataArray } from "../reducers/petReducer";
+import SearchBar from "../SearchBar";
 // import AdoptionPage from "./AdoptionPage";
 
 const AllPets = ({ petSpecies }) => {
@@ -44,6 +45,7 @@ const AllPets = ({ petSpecies }) => {
   // }
   return petData && petSpecies === null ? (
     <>
+      <SearchBar />
       <div>
         {petData?.pets?.map((data) => {
           return (
@@ -64,6 +66,7 @@ const AllPets = ({ petSpecies }) => {
     </>
   ) : petSpecies ? (
     <div>
+      <SearchBar />
       <h1>{filteredPets.length + " " + petSpecies}</h1>
       {filteredPets.map((data) => {
         return (

@@ -8,12 +8,14 @@ const Footer = () => {
     <FooterDiv>
       <Div1>
         <P>© 2014. Centre d'animaux Nature. All Rights Reserved.</P>
-        <Icon src="images/instagram.png" />
-        <Icon src="images/facebook.png" />
-        <Icon src="images/twitter.png" />
+        <Link>
+          <Icon src="images/instagram.png" />
+          <Icon src="images/facebook.png" />
+          <Icon src="images/twitter.png" />
+        </Link>
       </Div1>
       <Div2>
-        <P>info@nature.com</P>
+        <StyledLink>info@nature.com</StyledLink>
         <P>1500 Avenue Atwater Place Alexis-Nihon </P>
         <P>Westmount, Quebec, H3Z 1X5</P>
         <P>514-846-2190</P>

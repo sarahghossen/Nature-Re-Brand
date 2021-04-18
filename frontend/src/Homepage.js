@@ -201,8 +201,7 @@ const SubscribeButton = styled.button`
   text-decoration: none;
   display: inline-block;
   outline: none;
-  border: 2px solid;
-  border-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   color: var(--secondary-color);
   background-color: var(--primary-color);
   padding: 10px 17px 10px 17px;
@@ -218,6 +217,7 @@ const SubscribeButton = styled.button`
 const Form = styled.form``;
 
 const Input = styled.input`
+  border: 2px solid var(--secondary-color);
   padding: 10px;
   outline: none;
   width: 300px;
