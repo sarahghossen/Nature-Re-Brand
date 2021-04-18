@@ -79,7 +79,7 @@ const SignInForm = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 80px 60px 80px 60px;
+  padding: 60px;
 `;
 
 const Label = styled.label`

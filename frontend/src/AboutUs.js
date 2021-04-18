@@ -8,7 +8,7 @@ const AboutUs = () => {
       <H1Div>
         <H1>About Us</H1>
         <BigP>
-          W Since first opening our doors in 1985, Nature Pet Centers has always
+          Since first opening our doors in 1985, Nature Pet Centers has always
           been considered as leaders in the Pet Industry.
         </BigP>
       </H1Div>
@@ -37,10 +37,10 @@ const AboutUs = () => {
             friendly atmosphere. At Nature Pet Centers, we’re not just Animal
             Lovers.
           </P>
-          <P>
+          <H3>
             Are you ready to see our adorable animals available for adoption?
             They're waiting for you!
-          </P>
+          </H3>
           <ViewButton>View Now</ViewButton>
         </AboutUsDiv3>
         <ImgDiv>
@@ -121,8 +121,14 @@ const H1 = styled.h1`
   margin-bottom: 20px;
 `;
 
-const H2 = styled.h1`
+const H2 = styled.h2`
   font-size: 30px;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+`;
+
+const H3 = styled.h3`
+  font-size: 19px;
   margin-bottom: 30px;
   color: var(--secondary-color);
 `;
