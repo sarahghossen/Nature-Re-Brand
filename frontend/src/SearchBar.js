@@ -5,7 +5,6 @@ const SearchBar = () => {
   const [searched, setSearched] = useState("");
   const [selectedSuggestionIndex, setSelectedSuggestionIndex] = useState(0);
   const [pets, setPets] = useState();
-  //   const [highlight, setHighlight] = useState(undefined);
 
   useEffect(() => {
     fetch("/pets")

@@ -45,8 +45,8 @@ const AllPets = ({ petSpecies }) => {
   // }
   return petData && petSpecies === null ? (
     <>
-      <SearchBar />
-      <div>
+      {/* <SearchBar /> */}
+      <Wrapper>
         {petData?.pets?.map((data) => {
           return (
             <>
@@ -62,31 +62,63 @@ const AllPets = ({ petSpecies }) => {
             </>
           );
         })}
-      </div>
+      </Wrapper>
     </>
   ) : petSpecies ? (
-    <div>
-      <SearchBar />
-      <h1>{filteredPets.length + " " + petSpecies}</h1>
-      {filteredPets.map((data) => {
-        return (
-          <>
-            <Pet
-              key={data._id}
-              avatarSrc={data.avatarSrc}
-              name={data.name}
-              species={data.species}
-              gender={data.gender}
-              age={data.age}
-              id={data._id}
-            />
-          </>
-        );
-      })}
-    </div>
+    <Wrapper>
+      <NumberOfPets>
+        {/* <SearchBar /> */}
+        <H1>{filteredPets.length + " " + petSpecies}</H1>
+      </NumberOfPets>
+      <PetData>
+        {filteredPets.map((data) => {
+          return (
+            <>
+              <Pet
+                key={data._id}
+                avatarSrc={data.avatarSrc}
+                name={data.name}
+                species={data.species}
+                gender={data.gender}
+                age={data.age}
+                id={data._id}
+              />
+            </>
+          );
+        })}
+      </PetData>
+    </Wrapper>
   ) : (
-    <div>Loading...</div>
+    <div></div>
+    // <div>Loading...</div>
   );
 };
 
+const H1 = styled.h1`
+  font-size: 40px;
+  color: var(--secondary-color);
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--primary-color); */
+  /* align-items: center; */
+  padding: 30px;
+`;
+
+const PetData = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--primary-color); */
+  /* align-items: center; */
+  /* padding: 30px; */
+`;
+
+const NumberOfPets = styled.div``;
 export default AllPets;

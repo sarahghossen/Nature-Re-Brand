@@ -84,7 +84,7 @@
     "gender": "Female",
     "Breed": "Domestic",
     "description": "A super sweet, talkative, playful, and quirky cat who loves watching birds on TV. Absolutely loves tuna.",
-    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249608/Luna_cat_pic1_csgxnn.jpg",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618779128/Luna_cat_pic1_csgxnn.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249614/Luna_cat_pic2_pekjay.jpg"
   },
   {
@@ -139,7 +139,7 @@
     "gender": "Male",
     "Breed": "Golden Retriever",
     "description": "Big goofy ball of love who loves munching on potatoes.",
-    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249620/Winston_dog_pic1_w4bq06.jpg",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618778564/Winston_dog_pic1_w4bq06.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249620/Winston_dog_pic2_lvfmre.jpg"
   },
   {
@@ -194,7 +194,7 @@
     "gender": "Male",
     "Breed": "Labradoodle",
     "description": "A goofball that loves to play all the time. He prefers staying by humans than running after other dogs. Sleep is his favorite pass time, He's 5 but still believes himself to be a baby.",
-    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249588/Jackson_dog_pic1_ibij1c.jpg",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618778328/Jackson_dog_pic1_ibij1c.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249587/Jackson_dog_pic2_hcikmh.jpg"
   },
   {
@@ -227,7 +227,7 @@
     "gender": "Male",
     "Breed": "Parrot/Budgerigar Mix",
     "description": "Gentle and very energetic bird who likes to be in his own bubble.",
-    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249621/Woodtock_bird_pic1_qzxoc6.jpg",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618778655/Woodtock_bird_pic1_qzxoc6.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249575/Woodtock_bird_pic2_nl9yya.jpg"
   },
   {
@@ -238,8 +238,8 @@
     "gender": "Male",
     "Breed": "Amazon Perret",
     "description": "Very outgoing and energetic. Loves to sing and dance. Very king like personality.",
-    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249575/Bear_bird_pic1_g2nv6c.jpg",
-    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249575/Bear_bird_pic2_cpjffi.jpg"
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618778703/Bear_bird_pic2_cpjffi.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249575/Bear_bird_pic1_g2nv6c.jpg"
   },
   {
     "_id": "22",
@@ -249,12 +249,12 @@
     "gender": "Male",
     "Breed": "Cockatiel",
     "description": "A very overprotected bird who loves to be the loudest in the room and has lots of energy. He loves to sing hello to guests.",
-    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249588/Calypso_bird_pic1_jsgy8z.jpg",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618777627/Calypso_bird_pic1_jsgy8z.jpg",
     "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249581/Calypso_bird_pic2_wojdzq.png"
   },
   {
     "_id": "23",
-    "name": "Mrs. Jasmine and Mrs. Jade",
+    "name": "Jasmine & Jade",
     "age": "4",
     "species": "Bird",
     "gender": "Female",
