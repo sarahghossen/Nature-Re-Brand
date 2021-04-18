@@ -5,6 +5,7 @@ export default createGlobalStyle`
       --primary-color:#81c887;
       --secondary-color: #4c764e;
       --third-color: #19271a;
+      --yellow-color: #e8d37d;
     }
     *,
     *:before,
