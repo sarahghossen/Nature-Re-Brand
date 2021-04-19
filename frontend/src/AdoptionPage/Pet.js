@@ -25,7 +25,7 @@ const Pet = ({ name, id, avatarSrc, gender, age }) => {
 const PetDiv = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #ebe4ca;
+  background-color: var(--pinkish-color);
   /* padding: 20px; */
   margin: 20px;
   height: 320px;

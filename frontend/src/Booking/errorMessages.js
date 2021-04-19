@@ -1,4 +1,5 @@
 export const errorMessages = {
+  "invalid-email": "Invalid Email",
   "used-email":
     "Looks like you've already booked with that email! Please check your email for your booking information.",
   "used-Address":

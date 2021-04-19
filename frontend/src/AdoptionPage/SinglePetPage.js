@@ -32,7 +32,7 @@ const SinglePetPage = ({ setPetSpecies }) => {
           <Popup trigger={<Button>Book an Appointment</Button>} modal nested>
             {(close) => (
               <div>
-                <button onClick={close}>&times;</button>
+                <ButtonClose onClick={close}>&times;</ButtonClose>
                 <Booking />
               </div>
             )}
@@ -84,7 +84,7 @@ const Opener = styled.div`
   width: 40vw;
   margin: 40px;
   padding: 40px;
-  background-color: #ebe4ca;
+  background-color: var(--pinkish-color);
   height: 90vh;
 `;
 
@@ -163,6 +163,17 @@ const Button = styled.button`
   font-size: 17px;
   transition: all 0.5s ease;
   margin-bottom: 30px;
+  &:hover {
+    background-color: var(--third-color);
+  }
+`;
+const ButtonClose = styled.button`
+  position: absolute;
+  color: var(--secondary-color);
+  font-size: 40px;
+  padding: 1px 10px 1px 10px;
+  cursor: pointer;
+  border: none;
   &:hover {
     background-color: var(--third-color);
   }

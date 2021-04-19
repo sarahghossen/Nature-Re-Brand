@@ -73,60 +73,76 @@ const Booking = () => {
 
   return subStatus !== "confirmed" ? (
     <BookingDiv>
-      <h1>Form</h1>
-      <form onChange={(ev) => handleChange(ev)} disabled={disabled}>
-        <label>Full Name</label>
-        <input type="text" htmlFor="Fname" name="fullName" />
-        <label>Email</label>
-        <input type="email" htmlFor="email" name="Email" />
-        <label>Phone Number</label>
-        <input type="number" htmlFor="phone number" name="phoneNumber" />
-        <label>Address</label>
-        <input type="address" htmlFor="address" name="Address" />
-        <label>City</label>
-        <input type="text" htmlFor="city" name="City" />
-        <label>Province</label>
-        <input type="text" htmlFor="province" name="Province" />
-        <label>Postal Code</label>
-        <input type="text" htmlFor="postal code" name="postalCode" />
-        <p>Book a time:</p>
-        <DatePicker
-          placeholderText="Select Training Day"
-          showTimeSelect
-          dateFormat="MMMM d, yyyy h:mmaa"
-          selected={endDate}
-          selectsEnd
-          startDate={startDate}
-          endDate={endDate}
-          minDate={startDate}
-          onChange={(date) => {
-            setEndDate(date);
-            setBookingData({ ...bookingData, Date: date });
-          }}
-        />
-        <p>Are there any children living in your home?</p>
-        <label>
-          <input type="radio" value="yes" name="Children" />
-          Yes
-        </label>
-        <label>
-          <input type="radio" value="no" name="Children" />
-          No
-        </label>
-        <p>Do you currently have one or more animals at home?</p>
-        <label>
-          <input type="radio" value="yes" name="Animals" />
-          Yes
-        </label>
-        <label>
-          <input type="radio" value="no" name="Animals" />
-          No
-        </label>
-        <button disabled={checkDisabled} onClick={handleSubmit}>
-          Submit
-        </button>
-      </form>
-      {subStatus === "error" && <ErrorMsg>{errMessage}</ErrorMsg>}
+      <Div>
+        <H1>Form</H1>
+        <Form onChange={(ev) => handleChange(ev)} disabled={disabled}>
+          <Label>Full Name</Label>
+          <Input type="text" htmlFor="Fname" name="fullName" />
+          <Label>Email</Label>
+          <Input type="email" htmlFor="email" name="Email" />
+          <Label>Address</Label>
+          <Input type="address" htmlFor="address" name="Address" />
+          <Div2>
+            <Label style={{ marginRight: "10px" }}>Phone Number</Label>
+            <Input type="number" htmlFor="phone number" name="phoneNumber" />
+            <Label style={{ marginLeft: "10px", marginRight: "10px" }}>
+              City
+            </Label>
+            <Input type="text" htmlFor="city" name="City" />
+            <Label style={{ marginLeft: "10px", marginRight: "10px" }}>
+              Province
+            </Label>
+            <Input type="text" htmlFor="province" name="Province" />
+          </Div2>
+          <Div3>
+            <Label style={{ marginRight: "10px" }}>Postal Code</Label>
+            <Input type="text" htmlFor="postal code" name="postalCode" />
+            <Label style={{ marginLeft: "10px", marginRight: "10px" }}>
+              Book a time
+            </Label>
+            <DatePicker
+              style={{
+                border: "none",
+                outline: "none",
+              }}
+              placeholderText="Appointment Date"
+              showTimeSelect
+              dateFormat="MMMM d, yyyy h:mmaa"
+              selected={endDate}
+              selectsEnd
+              startDate={startDate}
+              endDate={endDate}
+              minDate={startDate}
+              onChange={(date) => {
+                setEndDate(date);
+                setBookingData({ ...bookingData, Date: date });
+              }}
+            />
+          </Div3>
+          <P>Are there any children living in your home?</P>
+          <Label>
+            <Input type="radio" value="yes" name="Children" />
+            Yes
+          </Label>
+          <Label>
+            <input type="radio" value="no" name="Children" />
+            No
+          </Label>
+          <p>Do you currently have one or more animals at home?</p>
+          <Label>
+            <Input type="radio" value="yes" name="Animals" />
+            Yes
+          </Label>
+          <Label>
+            <Input type="radio" value="no" name="Animals" />
+            No
+          </Label>
+          <Button disabled={checkDisabled} onClick={handleSubmit}>
+            Submit
+          </Button>
+        </Form>
+        {subStatus === "error" && <ErrorMsg>{errMessage}</ErrorMsg>}
+      </Div>
     </BookingDiv>
   ) : (
     <ConfirmationMsg bookingData={bookingData} />
@@ -134,7 +150,85 @@ const Booking = () => {
 };
 
 const BookingDiv = styled.div`
-  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: rgba(76, 118, 78, 0.8); */
+  background-color: rgba(25, 39, 26, 0.8);
+`;
+
+const Div = styled.div`
+  width: 60vw;
+  height: 90vh;
+  background-color: var(--pinkish-color);
+  padding: 30px;
+`;
+
+const Div2 = styled.div`
+  display: flex;
+`;
+const Div3 = styled.div`
+  display: flex;
+`;
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const Label = styled.label`
+  font-size: 15px;
+`;
+
+const Input = styled.input`
+  outline: none;
+  border: none;
+  padding: 5px;
+  margin-bottom: 10px;
+`;
+
+const H1 = styled.h1`
+  color: var(--secondary-color);
+  font-size: 40px;
+`;
+
+const P = styled.p`
+  font-size: 15px;
+`;
+
+const Margin = styled.span`
+  margin-right: 10px;
+`;
+
+const Button = styled.button`
+  text-decoration: none;
+  display: inline-block;
+  outline: none;
+  border: 2px solid;
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  padding: 10px;
+  cursor: pointer;
+  width: 150px;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  margin-bottom: 30px;
+  &:hover {
+    background-color: var(--third-color);
+  }
+  &:disabled {
+    color: white;
+    background-color: lightgrey;
+    border: 1px solid lightgrey;
+    cursor: not-allowed;
+  }
+  &:disabled:hover {
+    color: white;
+    background-color: lightgrey;
+    border: 1px solid lightgrey;
+  }
 `;
 
 export default Booking;
