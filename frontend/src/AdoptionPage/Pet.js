@@ -40,7 +40,6 @@ const ImgDiv = styled.div`
   height: 270px;
   width: 250px;
   overflow: hidden;
-  background-color: red;
   display: flex;
   align-items: center;
   justify-content: center;

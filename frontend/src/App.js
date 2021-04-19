@@ -49,7 +49,7 @@ const App = () => {
           </Route>
           <Route exact path="/adoption/:id">
             <AdoptionBanner />
-            <SinglePetPage />
+            <SinglePetPage setPetSpecies={setPetSpecies} />
           </Route>
           <Route exact path="/contact-us">
             <ContactUs />

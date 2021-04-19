@@ -45,23 +45,28 @@ const AllPets = ({ petSpecies }) => {
   // }
   return petData && petSpecies === null ? (
     <>
-      {/* <SearchBar /> */}
       <Wrapper>
-        {petData?.pets?.map((data) => {
-          return (
-            <>
-              <Pet
-                key={data._id}
-                avatarSrc={data.avatarSrc}
-                name={data.name}
-                species={data.species}
-                gender={data.gender}
-                age={data.age}
-                id={data._id}
-              />
-            </>
-          );
-        })}
+        <NumberOfPets>
+          {/* <SearchBar /> */}
+          <H1>All Pets</H1>
+        </NumberOfPets>
+        <PetData>
+          {petData?.pets?.map((data) => {
+            return (
+              <>
+                <Pet
+                  key={data._id}
+                  avatarSrc={data.avatarSrc}
+                  name={data.name}
+                  species={data.species}
+                  gender={data.gender}
+                  age={data.age}
+                  id={data._id}
+                />
+              </>
+            );
+          })}
+        </PetData>
       </Wrapper>
     </>
   ) : petSpecies ? (
@@ -104,9 +109,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: var(--primary-color); */
-  /* align-items: center; */
-  padding: 30px;
 `;
 
 const PetData = styled.div`
@@ -114,11 +116,9 @@ const PetData = styled.div`
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
-  align-items: center;
-  /* background-color: var(--primary-color); */
-  /* align-items: center; */
-  /* padding: 30px; */
 `;
 
-const NumberOfPets = styled.div``;
+const NumberOfPets = styled.div`
+  padding: 20px;
+`;
 export default AllPets;
