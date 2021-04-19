@@ -94,7 +94,7 @@ const Icon = styled.img`
 const StyledLink = styled(Link)`
   text-decoration: none;
   margin-left: 40px;
-  color: var(--primary-color);
+  color: #f9eed2;
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
@@ -109,8 +109,8 @@ const StyledSignIn = styled(Link)`
   display: inline-block;
   outline: none;
   border: 2px solid;
-  border-color: (--primary-color);
-  color: var(--primary-color);
+  border-color: #f9eed2;
+  color: #f9eed2;
   padding: 10px 17px 10px 17px;
   margin-left: 40px;
   -webkit-transition: ease-out 0.4s;

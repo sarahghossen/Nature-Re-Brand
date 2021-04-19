@@ -1,0 +1,80 @@
+[
+  {
+    "feature": {
+      "id": "100",
+      "name": "Pet Centre Nature",
+      "location": "Anjou",
+      "address": "6200 L.H.Lafontaine boulevard Anjou, Quebec, H1M 1S8",
+      "telNumber": "514-353-7611"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [45.59785, -73.5522]
+    }
+  },
+  {
+    "feature": {
+      "id": "101",
+      "name": "Pet Centre Nature",
+      "location": "Boisbriand",
+      "address": "3204 des Grandes Tourelles avenue Boisbriand, Quebec, J7H 0A2",
+      "telNumber": "450-430-0096"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [45.62699, -73.84882]
+    }
+  },
+  {
+    "feature": {
+      "id": "102",
+      "name": "Pet Centre Nature",
+      "location": "Lasalle",
+      "address": "8350 Newman boulevard Lasalle, Quebec, H8N 1X9",
+      "telNumber": "514-363-3221"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [45.43289, -73.62852]
+    }
+  },
+  {
+    "feature": {
+      "id": "103",
+      "name": "Pet Centre Nature",
+      "location": "Laval",
+      "address": "1600 Le Corbusier boulevard Laval, Quebec, H7S 1Y9",
+      "telNumber": "450-687-5710"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [45.56238, -73.73202]
+    }
+  },
+  {
+    "feature": {
+      "id": "104",
+      "name": "Pet Centre Nature",
+      "location": "Pointe-Claire (Head Office)",
+      "address": "6361 Transcanada Route #119 Complexe Pointe-Claire,",
+      "telNumber": "514-694-3291"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [45.466045, -73.823985]
+    }
+  },
+  {
+    "feature": {
+      "id": "106",
+      "name": "Pet Centre Nature",
+      "location": "Westmount",
+      "address": "Alexis-Nihon Plaza, Westmount, Quebec, H3Z 1X5",
+      "telNumber": "514-846-2190"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [45.48908, -73.58587]
+    }
+  }
+]

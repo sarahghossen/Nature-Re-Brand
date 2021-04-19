@@ -100,24 +100,26 @@ const Booking = () => {
             <Label style={{ marginLeft: "10px", marginRight: "10px" }}>
               Book a time
             </Label>
-            <DatePicker
-              style={{
-                border: "none",
-                outline: "none",
-              }}
-              placeholderText="Appointment Date"
-              showTimeSelect
-              dateFormat="MMMM d, yyyy h:mmaa"
-              selected={endDate}
-              selectsEnd
-              startDate={startDate}
-              endDate={endDate}
-              minDate={startDate}
-              onChange={(date) => {
-                setEndDate(date);
-                setBookingData({ ...bookingData, Date: date });
-              }}
-            />
+            <DatePickerDiv>
+              <DatePicker
+                // style={{
+                //   border: "none",
+                //   outline: "none",
+                // }}
+                placeholderText="Appointment Date"
+                showTimeSelect
+                dateFormat="MMMM d, yyyy h:mmaa"
+                selected={endDate}
+                selectsEnd
+                startDate={startDate}
+                endDate={endDate}
+                minDate={startDate}
+                onChange={(date) => {
+                  setEndDate(date);
+                  setBookingData({ ...bookingData, Date: date });
+                }}
+              />
+            </DatePickerDiv>
           </Div3>
           <P>Are there any children living in your home?</P>
           <Label>
@@ -194,12 +196,14 @@ const H1 = styled.h1`
   font-size: 40px;
 `;
 
-const P = styled.p`
-  font-size: 15px;
+const DatePickerDiv = styled.div`
+  & .react-datepicker-wrapper > .react-datepicker__input-container > input {
+    border: none;
+  }
 `;
 
-const Margin = styled.span`
-  margin-right: 10px;
+const P = styled.p`
+  font-size: 15px;
 `;
 
 const Button = styled.button`

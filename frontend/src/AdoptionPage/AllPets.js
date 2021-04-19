@@ -43,59 +43,67 @@ const AllPets = ({ petSpecies }) => {
   // if (petData) {
   //   console.log("PETS DATA", petData);
   // }
-  return petData && petSpecies === null ? (
+  console.log(petData, petSpecies);
+  return (
     <>
-      <Wrapper>
-        <NumberOfPets>
-          {/* <SearchBar /> */}
-          <H1>All Pets</H1>
-        </NumberOfPets>
-        <PetData>
-          {petData?.pets?.map((data) => {
-            return (
-              <>
-                <Pet
-                  key={data._id}
-                  avatarSrc={data.avatarSrc}
-                  name={data.name}
-                  species={data.species}
-                  gender={data.gender}
-                  age={data.age}
-                  id={data._id}
-                />
-              </>
-            );
-          })}
-        </PetData>
-      </Wrapper>
+      {petData && petSpecies === null && (
+        <>
+          <Wrapper>
+            <NumberOfPets>
+              {/* <SearchBar /> */}
+              <H1>All Pets</H1>
+            </NumberOfPets>
+            <PetData>
+              {petData?.pets?.map((data) => {
+                return (
+                  <>
+                    <Pet
+                      key={data._id}
+                      avatarSrc={data.avatarSrc}
+                      name={data.name}
+                      species={data.species}
+                      gender={data.gender}
+                      age={data.age}
+                      id={data._id}
+                    />
+                  </>
+                );
+              })}
+            </PetData>
+          </Wrapper>
+        </>
+      )}
+      {petSpecies && (
+        <Wrapper>
+          <NumberOfPets>
+            {/* <SearchBar /> */}
+            <H1>{filteredPets.length + " " + petSpecies}</H1>
+          </NumberOfPets>
+          <PetData>
+            {filteredPets.map((data) => {
+              return (
+                <>
+                  <Pet
+                    key={data._id}
+                    avatarSrc={data.avatarSrc}
+                    name={data.name}
+                    species={data.species}
+                    gender={data.gender}
+                    age={data.age}
+                    id={data._id}
+                  />
+                </>
+              );
+            })}
+          </PetData>
+        </Wrapper>
+      )}
+      {petData === null && (petSpecies === null || petSpecies === undefined) && (
+        <LoadingDiv>
+          <LoadingImg src="/images/Loading.gif" />
+        </LoadingDiv>
+      )}
     </>
-  ) : petSpecies ? (
-    <Wrapper>
-      <NumberOfPets>
-        {/* <SearchBar /> */}
-        <H1>{filteredPets.length + " " + petSpecies}</H1>
-      </NumberOfPets>
-      <PetData>
-        {filteredPets.map((data) => {
-          return (
-            <>
-              <Pet
-                key={data._id}
-                avatarSrc={data.avatarSrc}
-                name={data.name}
-                species={data.species}
-                gender={data.gender}
-                age={data.age}
-                id={data._id}
-              />
-            </>
-          );
-        })}
-      </PetData>
-    </Wrapper>
-  ) : (
-    <div></div>
-    // <div>Loading...</div>
   );
 };
 
@@ -120,5 +128,15 @@ const PetData = styled.div`
 
 const NumberOfPets = styled.div`
   padding: 20px;
+`;
+
+const LoadingImg = styled.img`
+  width: 30%;
+`;
+
+const LoadingDiv = styled.div`
+  display: flex;
+  text-align: center;
+  justify-content: center;
 `;
 export default AllPets;
