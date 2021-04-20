@@ -12,8 +12,10 @@ import locations from "./locations.json";
 
 const libraries = ["places"];
 const mapContainerStyle = {
-  width: "100vw",
-  height: "100vh",
+  width: "60vw",
+  height: "80vh",
+  marginRight: "40px",
+  outline: "none",
 };
 const center = {
   lat: 45.50169,
