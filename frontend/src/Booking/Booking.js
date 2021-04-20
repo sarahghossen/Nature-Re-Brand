@@ -4,9 +4,9 @@ import { useParams, Link } from "react-router-dom";
 import moment from "moment";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import ErrorMsg from "./ErrorMsg";
+import ErrorMsg from "../ErrorMsg";
 import ConfirmationMsg from "./ConfirmationMsg";
-import { errorMessages } from "./errorMessages";
+import { errorMessages } from "../errorMessages";
 
 const Booking = () => {
   const [startDate, setStartDate] = useState(null);

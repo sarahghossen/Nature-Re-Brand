@@ -4,33 +4,35 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const SignUp = ({ userData, setUserData }) => {
-  const [subStatus, setSubStatus] = useState("idle");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  const [errMessage, setErrMessage] = useState("");
 
-  const handleChange = (ev) => {
-    setUserData({ ...userData, [ev.target.name]: ev.target.value });
-  };
+  // const handleChange = (ev) => {
+  //   setUserData({ ...userData, [ev.target.name]: ev.target.value });
+  // };
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-
-    fetch("/users", {
-      method: "POST",
-      body: JSON.stringify({ email, password, name }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.status === 201) {
-          setSubStatus("success");
-          console.log("the data", data);
-          setUserData(data.data);
-        }
-      });
+    email.includes("@") === false
+      ? setErrMessage("not a proper email")
+      : fetch("/users", {
+          method: "POST",
+          body: JSON.stringify({ email, password, name }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.status === "success") {
+              setUserData(data.user);
+            } else {
+              setErrMessage("user already exists");
+            }
+          });
   };
 
   return (
@@ -58,6 +60,7 @@ const SignUp = ({ userData, setUserData }) => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <SignUpButton onClick={handleSubmit}>Sign Up</SignUpButton>
+        <p>{errMessage}</p>
       </SignUpForm>
       <H2>
         Have an Account?{" "}
@@ -114,13 +117,11 @@ const SignUpButton = styled.button`
   color: var(--secondary-color);
   background-color: var(--primary-color);
   padding: 10px 17px 10px 17px;
-  -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  transition: ease-out 0.4s;
   cursor: pointer;
   margin-top: 10px;
+  transition: all 0.5s ease;
   &:hover {
-    box-shadow: inset 150px 0 0 0 var(--third-color);
+    background-color: var(--third-color);
   }
 `;
 

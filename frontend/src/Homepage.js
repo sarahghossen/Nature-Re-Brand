@@ -58,8 +58,11 @@ const Homepage = () => {
           <ButtonReadMore to="/adoption">Read more</ButtonReadMore>
         </ButtonDiv>
         <ButtonDiv>
-          <ButtonImg src="images/buttonIconDonate.png" />
-          <H2Fix>Donate</H2Fix>
+          <ButtonImg
+            src="images/buttonIconDonate.png"
+            style={{ marginTop: "25px" }}
+          />
+          <H2>Donate</H2>
           <P>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
@@ -123,15 +126,13 @@ const ThreeButtonDiv = styled.div`
   margin-bottom: 100px;
 `;
 const ButtonDiv = styled.div`
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 30px;
-  margin: 10px;
-  /* border: 1px solid var(--primary-color);
-  border-radius: 30px; */
 `;
 const ButtonImg = styled.img`
   width: 80px;
@@ -165,12 +166,6 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   font-size: 30px;
   margin-bottom: 30px;
-  color: var(--secondary-color);
-`;
-
-const H2Fix = styled.h2`
-  font-size: 30px;
-  margin-bottom: 55px;
   color: var(--secondary-color);
 `;
 

@@ -5,9 +5,12 @@ import Button from "../Button";
 const SignIn = ({ userData, setUserData }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errMessage, setErrMessage] = useState("");
+  console.log(email);
 
   const handleSignIn = (e) => {
     e.preventDefault();
+    email.includes("@") === false && setErrMessage("Invalid email or password");
 
     fetch("/users/login", {
       method: "POST",
@@ -22,7 +25,7 @@ const SignIn = ({ userData, setUserData }) => {
         if (data.status === "success") {
           setUserData(data.user);
         } else {
-          return window.alert("user does not exist");
+          setErrMessage("Invalid email or password");
         }
       });
   };
@@ -45,6 +48,7 @@ const SignIn = ({ userData, setUserData }) => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <SignInButton onClick={handleSignIn}>Login</SignInButton>
+          <p>{errMessage}</p>
         </SignInForm>
         <SignUpDiv>
           <H2>
@@ -106,13 +110,11 @@ const SignInButton = styled.button`
   color: var(--secondary-color);
   background-color: var(--primary-color);
   padding: 10px 17px 10px 17px;
-  -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  transition: ease-out 0.4s;
   cursor: pointer;
   margin-top: 10px;
+  transition: all 0.5s ease;
   &:hover {
-    box-shadow: inset 150px 0 0 0 var(--third-color);
+    background-color: var(--third-color);
   }
 `;
 

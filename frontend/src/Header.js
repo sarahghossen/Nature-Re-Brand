@@ -29,7 +29,7 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
               <WelcomeDiv>
                 <Icon src="/images/userIcon.png" />
                 <Welcome>WELCOME, {userData.name.toUpperCase()}</Welcome>
-                <Button onClick={handleSignOut}>Sign Out</Button>
+                <StyledSignIn onClick={handleSignOut}>Sign Out</StyledSignIn>
               </WelcomeDiv>
             </LinkDiv>
           </UserDataDiv>

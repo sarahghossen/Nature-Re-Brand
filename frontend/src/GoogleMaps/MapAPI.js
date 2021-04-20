@@ -38,7 +38,7 @@ const MapAPI = () => {
   if (!isLoaded) return "Loading Maps";
 
   return (
-    <div>
+    <MapWrapper>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         zoom={11}
@@ -50,7 +50,6 @@ const MapAPI = () => {
             <Marker
               style={{
                 outline: "none",
-                border: "none",
               }}
               key={store.feature.id}
               position={{
@@ -91,7 +90,7 @@ const MapAPI = () => {
           </InfoWindow>
         )}
       </GoogleMap>
-    </div>
+    </MapWrapper>
   );
 };
 
@@ -102,6 +101,14 @@ const Div = styled.div`
 const H2 = styled.h2`
   font-size: 20px;
   margin-bottom: 15px;
+`;
+
+const MapWrapper = styled.div`
+  & div {
+    &:focus {
+      outline: none;
+    }
+  }
 `;
 
 export default MapAPI;
