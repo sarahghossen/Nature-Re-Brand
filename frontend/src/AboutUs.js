@@ -94,12 +94,10 @@ const ViewButton = styled(Link)`
   border-color: (--secondary-color);
   color: var(--secondary-color);
   padding: 8px 15px 8px 15px;
-  -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  transition: ease-out 0.4s;
   cursor: pointer;
+  transition: all 0.5s ease;
   &:hover {
-    box-shadow: inset 150px 0 0 0 var(--third-color);
+    background-color: var(--third-color);
   }
 `;
 
@@ -117,7 +115,7 @@ const BigP = styled.p`
 const H1 = styled.h1`
   font-size: 70px;
   font-weight: bold;
-  color: var(--secondary-color);
+  color: var(--third-color);
   margin-bottom: 20px;
 `;
 

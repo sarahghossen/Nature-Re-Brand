@@ -5,6 +5,7 @@
       "name": "Pet Centre Nature",
       "location": "Anjou",
       "address": "6200 L.H.Lafontaine boulevard Anjou, Quebec, H1M 1S8",
+      "email": "anjou@nature.com",
       "telNumber": "514-353-7611"
     },
     "geometry": {
@@ -18,6 +19,7 @@
       "name": "Pet Centre Nature",
       "location": "Boisbriand",
       "address": "3204 des Grandes Tourelles avenue Boisbriand, Quebec, J7H 0A2",
+      "email": "boisbriand@nature.com",
       "telNumber": "450-430-0096"
     },
     "geometry": {
@@ -31,6 +33,7 @@
       "name": "Pet Centre Nature",
       "location": "Lasalle",
       "address": "8350 Newman boulevard Lasalle, Quebec, H8N 1X9",
+      "email": "lasalle@nature.com",
       "telNumber": "514-363-3221"
     },
     "geometry": {
@@ -44,6 +47,7 @@
       "name": "Pet Centre Nature",
       "location": "Laval",
       "address": "1600 Le Corbusier boulevard Laval, Quebec, H7S 1Y9",
+      "email": "laval@nature.com",
       "telNumber": "450-687-5710"
     },
     "geometry": {
@@ -57,6 +61,7 @@
       "name": "Pet Centre Nature",
       "location": "Pointe-Claire (Head Office)",
       "address": "6361 Transcanada Route #119 Complexe Pointe-Claire,",
+      "email": "pointeclaire@nature.com",
       "telNumber": "514-694-3291"
     },
     "geometry": {
@@ -66,10 +71,25 @@
   },
   {
     "feature": {
+      "id": "105",
+      "name": "Pet Centre Nature",
+      "location": "Sainte-Dorothée",
+      "address": "960 Chemin Dessertes, Sainte-Dorothée, Quebec, H7X 3S9",
+      "email": "saintedorothee@nature.com",
+      "telNumber": "450-689-4080"
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [45.5292, -73.784889]
+    }
+  },
+  {
+    "feature": {
       "id": "106",
       "name": "Pet Centre Nature",
       "location": "Westmount",
       "address": "Alexis-Nihon Plaza, Westmount, Quebec, H3Z 1X5",
+      "email": "westmount@nature.com",
       "telNumber": "514-846-2190"
     },
     "geometry": {

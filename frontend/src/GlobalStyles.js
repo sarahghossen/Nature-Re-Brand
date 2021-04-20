@@ -6,7 +6,8 @@ export default createGlobalStyle`
       --secondary-color: #4c764e;
       --third-color: #19271a;
       --yellow-color: #e8d37d;
-      --pinkish-color: #ebe4ca
+      --pinkish-color: #ebe4ca;
+      --lightYellow-color: #f9eed2
     }
     *,
     *:before,

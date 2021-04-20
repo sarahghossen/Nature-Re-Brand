@@ -16,7 +16,7 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
           <UserDataDiv>
             <ImgDiv>
               <Link to="/">
-                <Logo src="/images/FullLogo.png" />
+                <Logo src="/images/FullLogo4.png" />
               </Link>
             </ImgDiv>
             <LinkDiv>
@@ -39,7 +39,7 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
           <UserDataDiv>
             <ImgDiv>
               <Link to="/">
-                <Logo src="/images/FullLogo.png" />
+                <Logo src="/images/FullLogo4.png" />
               </Link>
             </ImgDiv>
             <LinkDiv>
@@ -66,7 +66,7 @@ const UserDataDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 7px;
-  background-color: #4c764e;
+  background-color: var(--third-color);
   width: 100%;
 `;
 
@@ -94,13 +94,13 @@ const Icon = styled.img`
 const StyledLink = styled(Link)`
   text-decoration: none;
   margin-left: 40px;
-  color: #f9eed2;
+  color: var(--primary-color);
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
   cursor: pointer;
   &:hover {
-    color: inset 150px 0 0 0 var(--secondary-color);
+    color: var(--yellow-color);
   }
 `;
 
@@ -109,16 +109,17 @@ const StyledSignIn = styled(Link)`
   display: inline-block;
   outline: none;
   border: 2px solid;
-  border-color: #f9eed2;
-  color: #f9eed2;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
   padding: 10px 17px 10px 17px;
   margin-left: 40px;
-  -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  transition: ease-out 0.4s;
+  -webkit-transition: ease-out 0.2s;
+  -moz-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
   cursor: pointer;
   &:hover {
-    box-shadow: inset 150px 0 0 0 var(--third-color);
+    box-shadow: inset 150px 0 0 0 var(--yellow-color);
+    color: var(--third-color);
   }
 `;
 export default Header;

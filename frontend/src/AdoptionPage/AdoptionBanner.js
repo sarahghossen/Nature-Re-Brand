@@ -48,7 +48,7 @@ const BigP = styled.p`
 const H1 = styled.h1`
   font-size: 70px;
   font-weight: bold;
-  color: var(--secondary-color);
+  color: var(--third-color);
   margin-bottom: 20px;
   line-height: 1;
 `;
