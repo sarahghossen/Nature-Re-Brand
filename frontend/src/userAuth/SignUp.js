@@ -60,7 +60,7 @@ const SignUp = ({ userData, setUserData }) => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <SignUpButton onClick={handleSubmit}>Sign Up</SignUpButton>
-        <p>{errMessage}</p>
+        <P>{errMessage}</P>
       </SignUpForm>
       <H2>
         Have an Account?{" "}
@@ -133,6 +133,12 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   font-size: 15px;
   color: var(--third-color);
+`;
+
+const P = styled.p`
+  font-size: 15px;
+  color: red;
+  margin-top: 10px;
 `;
 
 export default SignUp;

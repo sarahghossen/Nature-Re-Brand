@@ -48,7 +48,7 @@ const SignIn = ({ userData, setUserData }) => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <SignInButton onClick={handleSignIn}>Login</SignInButton>
-          <p>{errMessage}</p>
+          <P>{errMessage}</P>
         </SignInForm>
         <SignUpDiv>
           <H2>
@@ -126,6 +126,12 @@ const H1 = styled.h1`
 const H2 = styled.h2`
   font-size: 15px;
   color: var(--third-color);
+`;
+
+const P = styled.p`
+  font-size: 15px;
+  color: red;
+  margin-top: 10px;
 `;
 
 export default SignIn;
