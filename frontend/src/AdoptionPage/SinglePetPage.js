@@ -1,6 +1,5 @@
-import React, { useEffect, useState, Component } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import ReactDOM from "react-dom";
 import { useParams, Link } from "react-router-dom";
 import Popup from "reactjs-popup";
 import Booking from "../Booking/Booking";
@@ -76,6 +75,12 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 100px;
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 0px;
+  }
 `;
 
 const Opener = styled.div`
@@ -86,6 +91,11 @@ const Opener = styled.div`
   padding: 40px;
   background-color: var(--pinkish-color);
   height: 90vh;
+  @media (max-width: 900px) {
+    width: 90vw;
+    margin: 20px;
+    padding: 20px;
+  }
 `;
 
 const Description = styled.div`
@@ -96,6 +106,10 @@ const Description = styled.div`
 const ImageDiv = styled.div`
   width: 20vw;
   height: 90vh;
+  @media (max-width: 900px) {
+    width: 90vw;
+    height: auto;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -174,6 +188,9 @@ const ButtonClose = styled.button`
   padding: 1px 10px 1px 10px;
   cursor: pointer;
   border: none;
+  @media (max-width: 900px) {
+    padding: 1px 3px 1px 3px;
+  }
   &:hover {
     background-color: var(--third-color);
   }

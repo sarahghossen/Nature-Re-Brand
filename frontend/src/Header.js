@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Button from "./Button";
 import { useMediaQuery } from "./useMediaQuery";
 
 const Header = ({ setPetSpecies, userData, setUserData }) => {
@@ -83,16 +82,26 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
               {/* <Div> */}
               <UL>
                 <LI>
-                  <LinkMobile onClick={handleSignOut}>Sign Out</LinkMobile>
+                  <LinkMobile
+                    onClick={() => setBurger(!burger)}
+                    onClick={handleSignOut}
+                  >
+                    Sign Out
+                  </LinkMobile>
                 </LI>
                 <LI>
-                  <LinkMobile to="/">Home</LinkMobile>
+                  <LinkMobile onClick={() => setBurger(!burger)} to="/">
+                    Home
+                  </LinkMobile>
                 </LI>
                 <LI>
-                  <LinkMobile to="/about-us">About Us</LinkMobile>
+                  <LinkMobile onClick={() => setBurger(!burger)} to="/about-us">
+                    About Us
+                  </LinkMobile>
                 </LI>
                 <LI>
                   <LinkMobile
+                    onClick={() => setBurger(!burger)}
                     onClick={() => setPetSpecies(null)}
                     to="/adoption"
                   >
@@ -100,7 +109,12 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
                   </LinkMobile>
                 </LI>
                 <LI>
-                  <LinkMobile to="/contact-us">Contact Us</LinkMobile>
+                  <LinkMobile
+                    onClick={() => setBurger(!burger)}
+                    to="/contact-us"
+                  >
+                    Contact Us
+                  </LinkMobile>
                 </LI>
               </UL>
               {/* </Div> */}
@@ -126,16 +140,23 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
               {/* <Div> */}
               <UL>
                 <LI>
-                  <LinkMobile to="/sign-in">Sign In</LinkMobile>
+                  <LinkMobile onClick={() => setBurger(!burger)} to="/sign-in">
+                    Sign In
+                  </LinkMobile>
                 </LI>
                 <LI>
-                  <LinkMobile to="/">Home</LinkMobile>
+                  <LinkMobile onClick={() => setBurger(!burger)} to="/">
+                    Home
+                  </LinkMobile>
                 </LI>
                 <LI>
-                  <LinkMobile to="/about-us">About Us</LinkMobile>
+                  <LinkMobile onClick={() => setBurger(!burger)} to="/about-us">
+                    About Us
+                  </LinkMobile>
                 </LI>
                 <LI>
                   <LinkMobile
+                    onClick={() => setBurger(!burger)}
                     onClick={() => setPetSpecies(null)}
                     to="/adoption"
                   >
@@ -143,7 +164,12 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
                   </LinkMobile>
                 </LI>
                 <LI>
-                  <LinkMobile to="/contact-us">Contact Us</LinkMobile>
+                  <LinkMobile
+                    onClick={() => setBurger(!burger)}
+                    to="/contact-us"
+                  >
+                    Contact Us
+                  </LinkMobile>
                 </LI>
               </UL>
               {/* </Div> */}
@@ -157,12 +183,11 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
 //MOBILE
 
 const Nav = styled.nav`
-  transform: ${(props) =>
-    props.burger ? "translateX(0%)" : "translateX(100%)"};
-  transition-duration: 1s;
+  width: ${(props) => (props.burger ? "0%" : "100%")};
+  transition: 0.5s;
   position: absolute;
+  overflow-x: hidden;
   right: 0;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -180,7 +205,7 @@ const Burger = styled.button`
   outline: none;
   cursor: pointer;
   transition: all 0.5s ease;
-  background-color: var(--primary-color);
+  background-color: var(--third-color);
   &:focus {
     background-color: var(--yellow-color);
   }
@@ -208,12 +233,13 @@ const UL = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* display: ${(props) => (props.burger ? "none" : "block")}; */
 `;
 const LI = styled.li`
   transition: all 0.2s ease;
   padding: 5px;
-  width: 100vw;
   text-align: center;
+  width: 100vw;
   &:focus {
     background-color: var(--primary-color);
   }
@@ -233,6 +259,8 @@ const MobileDiv = styled.div`
   background-color: var(--third-color);
   display: flex;
   justify-content: center;
+  width: 100vw;
+  overflow: hidden;
 `;
 
 //DESKTOP

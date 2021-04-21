@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -104,7 +104,7 @@ const H1Div = styled.div`
 const ImgDiv = styled.div``;
 
 const Img = styled.img`
-  width: 400px;
+  width: 350px;
 `;
 
 const ViewButton = styled(Link)`

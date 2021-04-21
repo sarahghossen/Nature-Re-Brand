@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Button from "./Button";
 // import { useMediaQuery } from "./useMediaQuery";
 
 const Homepage = () => {
@@ -133,7 +132,8 @@ const ServeText = styled.div`
 `;
 
 const ServeImg = styled.img`
-  width: 400px;
+  width: 350px;
+  overflow-x: hidden;
 `;
 
 const ThreeButtonDiv = styled.div`
@@ -154,7 +154,7 @@ const ThreeButtonDiv = styled.div`
   }
 `;
 const ButtonDiv = styled.div`
-  height: 50vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

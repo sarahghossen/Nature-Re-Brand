@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { useParams, Link } from "react-router-dom";
-import moment from "moment";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ErrorMsg from "../ErrorMsg";
@@ -83,23 +81,17 @@ const Booking = () => {
           <Label>Address</Label>
           <Input type="address" htmlFor="address" name="Address" />
           <Div2>
-            <Label style={{ marginRight: "10px" }}>Phone Number</Label>
+            <Label>Phone Number</Label>
             <Input type="number" htmlFor="phone number" name="phoneNumber" />
-            <Label style={{ marginLeft: "10px", marginRight: "10px" }}>
-              City
-            </Label>
+            <Label>City</Label>
             <Input type="text" htmlFor="city" name="City" />
-            <Label style={{ marginLeft: "10px", marginRight: "10px" }}>
-              Province
-            </Label>
+            <Label>Province</Label>
             <Input type="text" htmlFor="province" name="Province" />
           </Div2>
           <Div3>
-            <Label style={{ marginRight: "10px" }}>Postal Code</Label>
+            <Label>Postal Code</Label>
             <Input type="text" htmlFor="postal code" name="postalCode" />
-            <Label style={{ marginLeft: "10px", marginRight: "10px" }}>
-              Book a time
-            </Label>
+            <Label>Book a time</Label>
             <DatePickerDiv>
               <DatePicker
                 // style={{
@@ -122,23 +114,27 @@ const Booking = () => {
             </DatePickerDiv>
           </Div3>
           <P>Are there any children living in your home?</P>
-          <Label>
-            <Input type="radio" value="yes" name="Children" />
-            Yes
-          </Label>
-          <Label>
-            <input type="radio" value="no" name="Children" />
-            No
-          </Label>
-          <p>Do you currently have one or more animals at home?</p>
-          <Label>
-            <Input type="radio" value="yes" name="Animals" />
-            Yes
-          </Label>
-          <Label>
-            <Input type="radio" value="no" name="Animals" />
-            No
-          </Label>
+          <YesNo>
+            <Label>
+              <Input type="radio" value="yes" name="Children" />
+              Yes
+            </Label>
+            <Label>
+              <Input type="radio" value="no" name="Children" />
+              No
+            </Label>
+          </YesNo>
+          <P>Do you currently have one or more animals at home?</P>
+          <YesNo>
+            <Label>
+              <Input type="radio" value="yes" name="Animals" />
+              Yes
+            </Label>
+            <Label>
+              <Input type="radio" value="no" name="Animals" />
+              No
+            </Label>
+          </YesNo>
           <Button disabled={checkDisabled} onClick={handleSubmit}>
             Submit
           </Button>
@@ -157,8 +153,14 @@ const BookingDiv = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  /* background-color: rgba(76, 118, 78, 0.8); */
   background-color: rgba(25, 39, 26, 0.8);
+  @media (max-width: 900px) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 200vw;
+    height: 200vh;
+  }
 `;
 
 const Div = styled.div`
@@ -166,22 +168,46 @@ const Div = styled.div`
   height: 90vh;
   background-color: var(--pinkish-color);
   padding: 30px;
+  @media (max-width: 900px) {
+    width: 200vh;
+    height: auto;
+    background-color: var(--pinkish-color);
+    padding: 30px;
+    padding-left: 40px;
+  }
 `;
 
 const Div2 = styled.div`
   display: flex;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 const Div3 = styled.div`
   display: flex;
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
 `;
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media (max-width: 900px) {
+    width: 83vw;
+  }
+`;
+
+const YesNo = styled.div`
+  display: flex;
 `;
 
 const Label = styled.label`
   font-size: 15px;
+  margin-right: 10px;
+  @media (max-width: 900px) {
+    font-size: 13px;
+  }
 `;
 
 const Input = styled.input`
@@ -189,6 +215,7 @@ const Input = styled.input`
   border: none;
   padding: 5px;
   margin-bottom: 10px;
+  margin-right: 10px;
 `;
 
 const H1 = styled.h1`
@@ -198,12 +225,19 @@ const H1 = styled.h1`
 
 const DatePickerDiv = styled.div`
   & .react-datepicker-wrapper > .react-datepicker__input-container > input {
+    outline: none;
     border: none;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin-right: 10px;
   }
 `;
 
 const P = styled.p`
   font-size: 15px;
+  @media (max-width: 900px) {
+    font-size: 13px;
+  }
 `;
 
 const Button = styled.button`

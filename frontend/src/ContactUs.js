@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import MapAPI from "./GoogleMaps/MapAPI";
-import { Link } from "react-router-dom";
 
 const ContactUs = () => {
   return (

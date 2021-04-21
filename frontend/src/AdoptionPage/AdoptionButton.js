@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { useParams, Link } from "react-router-dom";
 import AllPets from "./AllPets";
 
 const AdoptionButton = ({ petSpecies, setPetSpecies }) => {
@@ -24,6 +23,12 @@ const AdoptionButton = ({ petSpecies, setPetSpecies }) => {
 const ButtonDiv = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Button = styled.button`

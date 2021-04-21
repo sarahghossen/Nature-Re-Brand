@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Button from "../Button";
 const SignIn = ({ userData, setUserData }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -75,6 +74,9 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  @media (max-width: 900px) {
+    min-height: 60vh;
+  }
 `;
 
 const SignInForm = styled.form`
