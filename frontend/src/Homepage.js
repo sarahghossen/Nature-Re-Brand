@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "./Button";
+// import { useMediaQuery } from "./useMediaQuery";
 
 const Homepage = () => {
+  // let isPageWide = useMediaQuery("(min-width: 900px)");
   return (
     <HomeDiv>
       {/* <BackgroundImg src="images/dog_header.png" /> */}
@@ -85,8 +87,10 @@ const HomeDiv = styled.div`
   background-image: url("/images/dog_header.png");
   background-position: top;
   background-repeat: no-repeat;
-  background-size: 100%;
-  /* width: 100vw; */
+  background-size: 100vw;
+  @media (max-width: 900px) {
+    background-size: 170vw;
+  }
 `;
 
 const WelcomeDiv = styled.div`
@@ -94,6 +98,12 @@ const WelcomeDiv = styled.div`
   height: 80vh;
   margin-left: 200px;
   padding-top: 100px;
+  @media (max-width: 900px) {
+    margin-left: 30px;
+    padding-top: 20px;
+    width: 65vw;
+    height: 45vh;
+  }
 `;
 
 const ServeDiv = styled.div`
@@ -101,7 +111,13 @@ const ServeDiv = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-  /* margin-top: 200px; */
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
 `;
 
 const ServeText = styled.div`
@@ -110,6 +126,10 @@ const ServeText = styled.div`
   width: 40vw;
   margin-left: 10vw;
   margin-right: 10vw;
+  @media (max-width: 900px) {
+    width: 80vw;
+    text-align: center;
+  }
 `;
 
 const ServeImg = styled.img`
@@ -124,6 +144,14 @@ const ThreeButtonDiv = styled.div`
   width: 80vw;
   margin-top: 100px;
   margin-bottom: 100px;
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 `;
 const ButtonDiv = styled.div`
   height: 50vh;
@@ -161,6 +189,10 @@ const H1 = styled.h1`
   color: var(--third-color);
   margin-bottom: 20px;
   line-height: 1;
+
+  @media (max-width: 900px) {
+    font-size: 40px;
+  }
 `;
 
 const H2 = styled.h2`
@@ -178,6 +210,9 @@ const P = styled.p`
 const BigP = styled.p`
   font-size: 17px;
   color: var(--third-color);
+  @media (max-width: 900px) {
+    font-size: 13px;
+  }
 `;
 
 const ServeImgDiv = styled.div``;
@@ -189,6 +224,10 @@ const SubscribeDiv = styled.div`
   align-items: center;
   background-color: var(--primary-color);
   height: 300px;
+  @media (max-width: 900px) {
+    height: 250px;
+    text-align: center;
+  }
 `;
 
 const SubscribeButton = styled.button`
@@ -213,6 +252,9 @@ const Input = styled.input`
   padding: 10px;
   outline: none;
   width: 300px;
+  @media (max-width: 900px) {
+    width: 250px;
+  }
 `;
 
 export default Homepage;
