@@ -199,6 +199,9 @@ const H2 = styled.h2`
   font-size: 30px;
   margin-bottom: 30px;
   color: var(--secondary-color);
+  @media (max-width: 900px) {
+    font-size: 25px;
+  }
 `;
 
 const P = styled.p`
@@ -227,6 +230,7 @@ const SubscribeDiv = styled.div`
   @media (max-width: 900px) {
     height: 250px;
     text-align: center;
+    padding: 5px;
   }
 `;
 

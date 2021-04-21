@@ -56,6 +56,9 @@ const AboutDiv = styled.div`
   background-position: top;
   background-repeat: no-repeat;
   background-size: 100%;
+  @media (max-width: 900px) {
+    background-size: 170vw;
+  }
 `;
 
 const AboutDiv2 = styled.div`
@@ -63,6 +66,13 @@ const AboutDiv2 = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
 `;
 const AboutUsDiv3 = styled.div`
   display: flex;
@@ -70,6 +80,12 @@ const AboutUsDiv3 = styled.div`
   width: 40vw;
   margin-left: 10vw;
   margin-right: 10vw;
+  @media (max-width: 900px) {
+    width: 80vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const H1Div = styled.div`
@@ -77,6 +93,12 @@ const H1Div = styled.div`
   height: 80vh;
   margin-left: 200px;
   padding-top: 100px;
+  @media (max-width: 900px) {
+    margin-left: 30px;
+    padding-top: 20px;
+    width: 65vw;
+    height: 45vh;
+  }
 `;
 
 const ImgDiv = styled.div``;
@@ -110,6 +132,9 @@ const P = styled.p`
 const BigP = styled.p`
   font-size: 17px;
   color: var(--third-color);
+  @media (max-width: 900px) {
+    font-size: 13px;
+  }
 `;
 
 const H1 = styled.h1`
@@ -117,12 +142,18 @@ const H1 = styled.h1`
   font-weight: bold;
   color: var(--third-color);
   margin-bottom: 20px;
+  @media (max-width: 900px) {
+    font-size: 40px;
+  }
 `;
 
 const H2 = styled.h2`
   font-size: 30px;
   margin-bottom: 30px;
   color: var(--secondary-color);
+  @media (max-width: 900px) {
+    font-size: 25px;
+  }
 `;
 
 const H3 = styled.h3`
