@@ -58,35 +58,54 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
       )}
     </Container>
   ) : (
+    //MOBILE
     <Container>
       {userData ? (
         <>
-          <Nav>
+          <MobileDiv>
             <ImgDiv>
               <Link to="/">
                 <Logo src="/images/FullLogo4.png" />
               </Link>
             </ImgDiv>
-            <Div>
-              <Input />
-              <Span></Span>
-              <Span></Span>
-              <Span></Span>
+            <WelcomeMobile>
+              <IconMobile src="/images/userIcon.png" />
+              {userData.name.toUpperCase()}
+            </WelcomeMobile>
+            <ButtonDiv>
+              <Burger
+                onClick={() => {
+                  setBurger(!burger);
+                }}
+              ></Burger>
+            </ButtonDiv>
+            <Nav burger={burger}>
+              {/* <Div> */}
               <UL>
-                <LI to="/">Home</LI>
-                <LI to="/about-us">About Us</LI>
-                <LI onClick={() => setPetSpecies(null)} to="/adoption">
-                  Adoption
+                <LI>
+                  <LinkMobile onClick={handleSignOut}>Sign Out</LinkMobile>
                 </LI>
-                <LI to="/contact-us">Contact Us</LI>
-                <WelcomeDivMobile>
-                  <Icon src="/images/userIcon.png" />
-                  <Welcome>WELCOME, {userData.name.toUpperCase()}</Welcome>
-                  <StyledSignIn onClick={handleSignOut}>Sign Out</StyledSignIn>
-                </WelcomeDivMobile>
+                <LI>
+                  <LinkMobile to="/">Home</LinkMobile>
+                </LI>
+                <LI>
+                  <LinkMobile to="/about-us">About Us</LinkMobile>
+                </LI>
+                <LI>
+                  <LinkMobile
+                    onClick={() => setPetSpecies(null)}
+                    to="/adoption"
+                  >
+                    Adoption
+                  </LinkMobile>
+                </LI>
+                <LI>
+                  <LinkMobile to="/contact-us">Contact Us</LinkMobile>
+                </LI>
               </UL>
-            </Div>
-          </Nav>
+              {/* </Div> */}
+            </Nav>
+          </MobileDiv>
         </>
       ) : (
         <>
@@ -135,7 +154,6 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
     </Container>
   );
 };
-
 //MOBILE
 
 const Nav = styled.nav`
@@ -163,7 +181,7 @@ const Burger = styled.button`
   cursor: pointer;
   transition: all 0.5s ease;
   background-color: var(--primary-color);
-  &:hover {
+  &:focus {
     background-color: var(--yellow-color);
   }
 `;
@@ -172,9 +190,19 @@ const ButtonDiv = styled.div`
   display: flex;
   justify-content: flex-end;
 `;
-const Div = styled.div``;
-const Input = styled.input``;
-const Span = styled.span``;
+
+const WelcomeMobile = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: var(--primary-color);
+  margin-left: 10vw;
+`;
+const IconMobile = styled.img`
+  width: 20px;
+`;
+
 const UL = styled.ul`
   display: flex;
   flex-direction: column;
@@ -186,7 +214,7 @@ const LI = styled.li`
   padding: 5px;
   width: 100vw;
   text-align: center;
-  &:hover {
+  &:focus {
     background-color: var(--primary-color);
   }
 `;
@@ -195,12 +223,16 @@ const LinkMobile = styled(Link)`
   text-decoration: none;
   font-size: 35px;
   color: var(--third-color);
+  &:focus {
+    background-color: var(--primary-color);
+  }
 `;
 const Container = styled.div``;
-const WelcomeDivMobile = styled.div``;
+
 const MobileDiv = styled.div`
   background-color: var(--third-color);
   display: flex;
+  justify-content: center;
 `;
 
 //DESKTOP
