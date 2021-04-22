@@ -21,16 +21,16 @@ const App = () => {
   const [petSpecies, setPetSpecies] = useState(null);
   const [userData, setUserData] = useState(null);
 
+  let getId = localStorage.getItem("_id");
   useEffect(() => {
-    let getId = localStorage.getItem("_id");
     console.log("BEFORE SIGN IN", getId);
     fetch(`/users/login/${getId}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data.user);
-        setUserData("USER DATA", data.user);
+        setUserData(data.user);
       });
-  }, []);
+  }, [getId]);
 
   return (
     <>
