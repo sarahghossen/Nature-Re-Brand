@@ -41,7 +41,7 @@ const AboutUs = () => {
             Are you ready to see our adorable animals available for adoption?
             They're waiting for you!
           </H3>
-          <ViewButton>View Now</ViewButton>
+          <ViewButton to="/adoption">View Now</ViewButton>
         </AboutUsDiv3>
         <ImgDiv>
           <Img src="images/birdBlob.png" />

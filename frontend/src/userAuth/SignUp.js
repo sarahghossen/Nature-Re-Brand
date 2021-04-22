@@ -84,7 +84,7 @@ const Container = styled.div`
   align-items: center;
   min-height: 100vh;
   @media (max-width: 900px) {
-    min-height: 60vh;
+    min-height: 70vh;
   }
 `;
 

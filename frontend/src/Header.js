@@ -6,9 +6,18 @@ import { useMediaQuery } from "./useMediaQuery";
 const Header = ({ setPetSpecies, userData, setUserData }) => {
   const [burger, setBurger] = useState(false);
   let isPageWide = useMediaQuery("(min-width: 900px)");
+  console.log("USERDATA", userData);
+
+  const handleAdoptionLink = () => {
+    setBurger(!burger);
+    setPetSpecies(null);
+  };
+
   const handleSignOut = () => {
     setUserData(null);
+    localStorage.removeItem("_id");
   };
+  // {userData.name.toUpperCase()}
 
   return isPageWide ? (
     <Container>
@@ -29,7 +38,7 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
               <StyledLink to="/contact-us">Contact Us</StyledLink>
               <WelcomeDiv>
                 <Icon src="/images/userIcon.png" />
-                <Welcome>WELCOME, {userData.name.toUpperCase()}</Welcome>
+                <Welcome>WELCOME, </Welcome>
                 <StyledSignIn onClick={handleSignOut}>Sign Out</StyledSignIn>
               </WelcomeDiv>
             </LinkDiv>
@@ -69,7 +78,7 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
             </ImgDiv>
             <WelcomeMobile>
               <IconMobile src="/images/userIcon.png" />
-              {userData.name.toUpperCase()}
+              {/* {userData.name.toUpperCase()} */}
             </WelcomeMobile>
             <ButtonDiv>
               <Burger
@@ -100,11 +109,7 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
                   </LinkMobile>
                 </LI>
                 <LI>
-                  <LinkMobile
-                    onClick={() => setBurger(!burger)}
-                    onClick={() => setPetSpecies(null)}
-                    to="/adoption"
-                  >
+                  <LinkMobile onClick={handleAdoptionLink} to="/adoption">
                     Adoption
                   </LinkMobile>
                 </LI>
@@ -155,11 +160,7 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
                   </LinkMobile>
                 </LI>
                 <LI>
-                  <LinkMobile
-                    onClick={() => setBurger(!burger)}
-                    onClick={() => setPetSpecies(null)}
-                    to="/adoption"
-                  >
+                  <LinkMobile onClick={handleAdoptionLink} to="/adoption">
                     Adoption
                   </LinkMobile>
                 </LI>
@@ -233,24 +234,23 @@ const UL = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* display: ${(props) => (props.burger ? "none" : "block")}; */
 `;
 const LI = styled.li`
   transition: all 0.2s ease;
   padding: 5px;
   text-align: center;
   width: 100vw;
-  &:focus {
-    background-color: var(--primary-color);
-  }
 `;
 
 const LinkMobile = styled(Link)`
   text-decoration: none;
   font-size: 35px;
   color: var(--third-color);
+  @media (max-width: 900px) {
+    font-size: 25px;
+  }
   &:focus {
-    background-color: var(--primary-color);
+    color: var(--primary-color);
   }
 `;
 const Container = styled.div``;

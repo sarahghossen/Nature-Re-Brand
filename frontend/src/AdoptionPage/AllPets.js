@@ -9,7 +9,6 @@ import {
 } from "../actions";
 import Pet from "./Pet";
 import { getPetDataArray } from "../reducers/petReducer";
-import SearchBar from "../SearchBar";
 // import AdoptionPage from "./AdoptionPage";
 
 const AllPets = ({ petSpecies }) => {

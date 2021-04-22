@@ -25,7 +25,7 @@ const SinglePetPage = ({ setPetSpecies }) => {
       <Container>
         <Opener>
           <StyledLink onClick={() => setPetSpecies(null)} to="/adoption">
-            View All Pets
+            ⇐ View All Pets
           </StyledLink>
           <H1>{petId.name}</H1>
           <Popup trigger={<Button>Book an Appointment</Button>} modal nested>
@@ -66,9 +66,21 @@ const SinglePetPage = ({ setPetSpecies }) => {
       </Container>
     </>
   ) : (
-    <div>Loading.. </div>
+    <LoadingDiv>
+      <LoadingImg src="/images/Loading.gif" />
+    </LoadingDiv>
   );
 };
+
+const LoadingImg = styled.img`
+  width: 30%;
+`;
+
+const LoadingDiv = styled.div`
+  display: flex;
+  text-align: center;
+  justify-content: center;
+`;
 
 const Container = styled.div`
   display: flex;
@@ -95,6 +107,7 @@ const Opener = styled.div`
     width: 90vw;
     margin: 20px;
     padding: 20px;
+    height: auto;
   }
 `;
 
@@ -116,17 +129,23 @@ const StyledLink = styled(Link)`
   margin-bottom: 20px;
   text-decoration: none;
   color: var(--secondary-color);
-  font-size: 13px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  &:hover {
+    color: var(--primary-color);
+  }
 `;
 
 const H1 = styled.h1`
   font-size: 40px;
   margin-bottom: 20px;
+  color: var(--secondary-color);
 `;
 
 const H2 = styled.h2`
   font-size: 20px;
   margin-bottom: 20px;
+  color: var(--secondary-color);
 `;
 
 const PDes = styled.p`
@@ -190,6 +209,8 @@ const ButtonClose = styled.button`
   border: none;
   @media (max-width: 900px) {
     padding: 1px 3px 1px 3px;
+    background-color: var(--secondary-color);
+    color: var(--pinkish-color);
   }
   &:hover {
     background-color: var(--third-color);

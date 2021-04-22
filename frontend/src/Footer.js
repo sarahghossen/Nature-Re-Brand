@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { FaFacebook } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { AiFillTwitterCircle } from "react-icons/ai";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -13,11 +16,17 @@ const Footer = () => {
     <FooterDiv>
       <Div1>
         <P>© 2014. Centre d'animaux Nature. All Rights Reserved.</P>
-        <Link>
-          <Icon src="images/instagram.png" />
-          <Icon src="images/facebook.png" />
-          <Icon src="images/twitter.png" />
-        </Link>
+        <LinkIcon>
+          <Icon>
+            <AiFillInstagram />
+          </Icon>
+          <Icon>
+            <FaFacebook />
+          </Icon>
+          <Icon>
+            <AiFillTwitterCircle />
+          </Icon>
+        </LinkIcon>
         <Button onClick={scrollToTop}>Back to top</Button>
       </Div1>
       <Div2>
@@ -42,7 +51,7 @@ const Footer = () => {
 
 const FooterDiv = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   background-color: var(--third-color);
   padding: 30px;
   @media (max-width: 900px) {
@@ -72,13 +81,22 @@ const P = styled.p`
   }
 `;
 
-const Icon = styled.img`
-  width: 25px;
-  margin: 10px;
+const Icon = styled.div`
+  width: 15px;
+  margin: 5px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 25px;
+  padding-right: 30px;
   @media (max-width: 900px) {
-    width: 15px;
-    margin: 5px;
+    font-size: 20px;
+    padding-right: 20px;
   }
+`;
+
+const LinkIcon = styled(Link)`
+  display: flex;
+  width: 5vw;
 `;
 
 const StyledLink = styled(Link)`

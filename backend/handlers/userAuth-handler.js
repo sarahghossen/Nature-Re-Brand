@@ -10,18 +10,19 @@ const options = {
   useUnifiedTopology: true,
 };
 
-const getAllUsers = async (req, res) => {
+const getUser = async (req, res) => {
   const client = await MongoClient(MONGO_URI, options);
-  try {
-    await client.connect();
-    const db = client.db("pet_data");
-    const data = await db.collection("users").find().toArray();
-    res.status(200).json({ status: 200, data: data });
-    // console.log(data);
-  } catch (err) {
-    res.status(400).json({ status: 400, msg: "can't find data" });
-  }
-  client.close();
+  const _id = req.params._id;
+  console.log(req.params);
+  console.log("REQ PARAMS", req.params._id);
+  await client.connect();
+  const db = client.db("pet_data");
+  db.collection("users").findOne({ _id }, (err, result) => {
+    result
+      ? res.status(200).json({ status: "success", _id, user: result })
+      : res.status(404).json({ status: 404, _id, user: "Not Found" });
+    client.close();
+  });
 };
 
 const addUser = async (req, res) => {
@@ -32,12 +33,6 @@ const addUser = async (req, res) => {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
     await client.connect();
     const db = client.db("pet_data");
-    // await db.collection("users").insertOne({
-    //   name: req.body.name,
-    //   email: req.body.email,
-    //   password: hashedPassword,
-    // });
-
     const foundUser = await db
       .collection("users")
       .findOne({ email: req.body.email });
@@ -80,7 +75,7 @@ const userAuth = async (req, res) => {
 };
 
 module.exports = {
-  getAllUsers,
+  getUser,
   addUser,
   userAuth,
 };

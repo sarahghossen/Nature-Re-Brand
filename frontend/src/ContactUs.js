@@ -157,32 +157,57 @@ const ContactUsDiv = styled.div`
   background-position: top;
   background-repeat: no-repeat;
   background-size: 100%;
+  @media (max-width: 900px) {
+    background-size: 170vw;
+  }
 `;
 
-const LocationsDiv = styled.div``;
+const LocationsDiv = styled.div`
+  @media (max-width: 900px) {
+    margin-top: -90vh;
+  }
+`;
 
 const Location = styled.div`
   margin-bottom: 20px;
 `;
 
-const MapDiv = styled.div``;
+const MapDiv = styled.div`
+  @media (max-width: 900px) {
+    visibility: hidden;
+  }
+`;
 
 const H1Div = styled.div`
   width: 35vw;
   height: 80vh;
   margin-left: 200px;
   padding-top: 100px;
+  @media (max-width: 900px) {
+    margin-left: 30px;
+    padding-top: 20px;
+    width: 55vw;
+    height: 45vh;
+  }
 `;
 
 const BigDiv = styled.div`
   display: flex;
   justify-content: center;
   margin: 60px;
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const BigP = styled.p`
   font-size: 17px;
   color: var(--third-color);
+  @media (max-width: 900px) {
+    font-size: 13px;
+  }
 `;
 
 const H1 = styled.h1`
@@ -190,6 +215,10 @@ const H1 = styled.h1`
   font-weight: bold;
   color: var(--third-color);
   margin-bottom: 20px;
+
+  @media (max-width: 900px) {
+    font-size: 40px;
+  }
 `;
 
 const H2 = styled.h2``;

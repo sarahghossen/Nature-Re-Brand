@@ -81,37 +81,47 @@ const Booking = () => {
           <Label>Address</Label>
           <Input type="address" htmlFor="address" name="Address" />
           <Div2>
-            <Label>Phone Number</Label>
-            <Input type="number" htmlFor="phone number" name="phoneNumber" />
-            <Label>City</Label>
-            <Input type="text" htmlFor="city" name="City" />
-            <Label>Province</Label>
-            <Input type="text" htmlFor="province" name="Province" />
+            <Div5>
+              <Label>Phone Number</Label>
+              <Input type="number" htmlFor="phone number" name="phoneNumber" />
+            </Div5>
+            <Div5>
+              <Label>City</Label>
+              <Input type="text" htmlFor="city" name="City" />
+            </Div5>
+            <Div5>
+              <Label>Province</Label>
+              <Input type="text" htmlFor="province" name="Province" />
+            </Div5>
           </Div2>
           <Div3>
-            <Label>Postal Code</Label>
-            <Input type="text" htmlFor="postal code" name="postalCode" />
-            <Label>Book a time</Label>
-            <DatePickerDiv>
-              <DatePicker
-                // style={{
-                //   border: "none",
-                //   outline: "none",
-                // }}
-                placeholderText="Appointment Date"
-                showTimeSelect
-                dateFormat="MMMM d, yyyy h:mmaa"
-                selected={endDate}
-                selectsEnd
-                startDate={startDate}
-                endDate={endDate}
-                minDate={startDate}
-                onChange={(date) => {
-                  setEndDate(date);
-                  setBookingData({ ...bookingData, Date: date });
-                }}
-              />
-            </DatePickerDiv>
+            <Div4>
+              <Label>Book a time</Label>
+              <DatePickerDiv>
+                <DatePicker
+                  // style={{
+                  //   border: "none",
+                  //   outline: "none",
+                  // }}
+                  placeholderText="Appointment Date"
+                  showTimeSelect
+                  dateFormat="MMMM d, yyyy h:mmaa"
+                  selected={endDate}
+                  selectsEnd
+                  startDate={startDate}
+                  endDate={endDate}
+                  minDate={startDate}
+                  onChange={(date) => {
+                    setEndDate(date);
+                    setBookingData({ ...bookingData, Date: date });
+                  }}
+                />
+              </DatePickerDiv>
+            </Div4>
+            <Div4>
+              <Label>Postal Code</Label>
+              <Input type="text" htmlFor="postal code" name="postalCode" />
+            </Div4>
           </Div3>
           <P>Are there any children living in your home?</P>
           <YesNo>
@@ -159,7 +169,7 @@ const BookingDiv = styled.div`
     justify-content: center;
     align-items: flex-start;
     width: 200vw;
-    height: 200vh;
+    height: 100vh;
   }
 `;
 
@@ -180,15 +190,36 @@ const Div = styled.div`
 const Div2 = styled.div`
   display: flex;
   @media (max-width: 900px) {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 `;
 const Div3 = styled.div`
   display: flex;
   @media (max-width: 900px) {
-    flex-direction: column;
   }
 `;
+
+const Div4 = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    width: 40vw;
+  }
+`;
+
+const Div5 = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90vw;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    width: 40vw;
+  }
+`;
+
 const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -230,6 +261,9 @@ const DatePickerDiv = styled.div`
     padding: 5px;
     margin-bottom: 10px;
     margin-right: 10px;
+    @media (max-width: 900px) {
+      width: 37vw;
+    }
   }
 `;
 
@@ -253,6 +287,10 @@ const Button = styled.button`
   font-size: 15px;
   transition: all 0.5s ease;
   margin-bottom: 30px;
+  @media (max-width: 900px) {
+    width: 100px;
+    padding: 5px;
+  }
   &:hover {
     background-color: var(--third-color);
   }

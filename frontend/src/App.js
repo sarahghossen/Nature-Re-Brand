@@ -5,7 +5,6 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import styled from "styled-components";
 import AllPets from "./AdoptionPage/AllPets";
 import Homepage from "./Homepage";
 import Header from "./Header";
@@ -21,7 +20,17 @@ import SignUp from "./userAuth/SignUp";
 const App = () => {
   const [petSpecies, setPetSpecies] = useState(null);
   const [userData, setUserData] = useState(null);
-  // console.log(userData);
+
+  useEffect(() => {
+    let getId = localStorage.getItem("_id");
+    console.log("BEFORE SIGN IN", getId);
+    fetch(`/users/login/${getId}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data.user);
+        setUserData("USER DATA", data.user);
+      });
+  }, []);
 
   return (
     <>
