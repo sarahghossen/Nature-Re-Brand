@@ -1,5 +1,5 @@
 const assert = require("assert");
-const { MongoClient, ObjectId } = require("mongodb");
+const { MongoClient, ObjectID } = require("mongodb");
 const bcrypt = require("bcrypt");
 
 require("dotenv").config();
@@ -17,7 +17,8 @@ const getUser = async (req, res) => {
   console.log("REQ PARAMS", req.params._id);
   await client.connect();
   const db = client.db("pet_data");
-  db.collection("users").findOne({ _id: ObjectId(_id) }, (err, result) => {
+  console.log(_id);
+  db.collection("users").findOne({ _id: ObjectID(_id) }, (err, result) => {
     result
       ? res.status(200).json({ status: "success", _id, user: result })
       : res.status(404).json({ status: 404, _id, user: "Not Found" });

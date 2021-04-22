@@ -4,7 +4,13 @@ import styled from "styled-components";
 // import { useMediaQuery } from "./useMediaQuery";
 
 const Homepage = () => {
-  // let isPageWide = useMediaQuery("(min-width: 900px)");
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <HomeDiv>
       {/* <BackgroundImg src="images/dog_header.png" /> */}
@@ -56,7 +62,9 @@ const Homepage = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
           </P>
-          <ButtonReadMore to="/adoption">Read more</ButtonReadMore>
+          <ButtonReadMore onClick={scrollToTop} to="/adoption">
+            Read more
+          </ButtonReadMore>
         </ButtonDiv>
         <ButtonDiv>
           <ButtonImg

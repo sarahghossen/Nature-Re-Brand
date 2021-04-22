@@ -11,8 +11,9 @@ const SignIn = ({ userData, setUserData }) => {
 
   // console.log(email);
 
-  const handleSignIn = (e) => {
-    e.preventDefault();
+  const handleSignIn = (ev) => {
+    ev.preventDefault();
+
     email.includes("@") === false && setErrMessage("Invalid email or password");
 
     fetch("/users/login", {
@@ -25,7 +26,7 @@ const SignIn = ({ userData, setUserData }) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.status === "success") {
-          console.log("SIGN IN, USER ID", data.user._id);
+          // console.log("SIGN IN, USER ID", data.user._id);
           setUserData(data.user);
           localStorage.setItem("_id", data.user._id);
           history.push("/");

@@ -12,8 +12,9 @@ const SignUp = ({ userData, setUserData }) => {
   //   setUserData({ ...userData, [ev.target.name]: ev.target.value });
   // };
 
-  const handleSubmit = (ev) => {
+  const handleSignUp = (ev) => {
     ev.preventDefault();
+
     email.includes("@") === false
       ? setErrMessage("not a proper email")
       : fetch("/users", {
@@ -25,7 +26,6 @@ const SignUp = ({ userData, setUserData }) => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
             if (data.status === "success") {
               setUserData(data.user);
             } else {
@@ -58,7 +58,7 @@ const SignUp = ({ userData, setUserData }) => {
           name="password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <SignUpButton onClick={handleSubmit}>Sign Up</SignUpButton>
+        <SignUpButton onClick={handleSignUp}>Sign Up</SignUpButton>
         <P>{errMessage}</P>
       </SignUpForm>
       <H2>

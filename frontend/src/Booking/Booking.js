@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import DatePicker from "react-datepicker";
+import setHours from "date-fns/setHours";
+import setMinutes from "date-fns/setMinutes";
+import setDate from "date-fns/setDate";
 import "react-datepicker/dist/react-datepicker.css";
 import ErrorMsg from "../ErrorMsg";
 import ConfirmationMsg from "./ConfirmationMsg";
@@ -8,7 +11,10 @@ import { errorMessages } from "../errorMessages";
 
 const Booking = () => {
   const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
+  // const [endDate, setEndDate] = useState(null);
+  // const [startDate, setStartDate] = useState(
+  //   setHours(setMinutes(new Date(), 30), 17)
+  // );
   const [bookingData, setBookingData] = useState({
     fullName: "",
     Email: "",
@@ -99,22 +105,16 @@ const Booking = () => {
               <Label>Book a time</Label>
               <DatePickerDiv>
                 <DatePicker
-                  // style={{
-                  //   border: "none",
-                  //   outline: "none",
-                  // }}
-                  placeholderText="Appointment Date"
-                  showTimeSelect
-                  dateFormat="MMMM d, yyyy h:mmaa"
-                  selected={endDate}
-                  selectsEnd
-                  startDate={startDate}
-                  endDate={endDate}
-                  minDate={startDate}
+                  selected={startDate}
                   onChange={(date) => {
-                    setEndDate(date);
+                    setStartDate(date);
                     setBookingData({ ...bookingData, Date: date });
                   }}
+                  minDate={new Date()}
+                  showTimeSelect
+                  minTime={setHours(setMinutes(new Date(), 0), 10)}
+                  maxTime={setHours(setMinutes(new Date(), 0), 18)}
+                  dateFormat="MMMM d, yyyy h:mm aa"
                 />
               </DatePickerDiv>
             </Div4>

@@ -37,7 +37,7 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
               <StyledLink to="/contact-us">Contact Us</StyledLink>
               <WelcomeDiv>
                 <Icon src="/images/userIcon.png" />
-                <Welcome>WELCOME, {userData?.name?.toUpperCase()}</Welcome>
+                <Welcome>WELCOME, {userData.name.toUpperCase()}</Welcome>
                 <StyledSignIn onClick={handleSignOut}>Sign Out</StyledSignIn>
               </WelcomeDiv>
             </LinkDiv>
