@@ -6,9 +6,13 @@ const {
   getAllPets,
   getSpecificSpeciesOfPets,
   getPet,
-  bookAppointment,
-} = require("./handlers.js");
-
+} = require("./handlers/Pet-handler.js");
+const { bookAppointment } = require("./handlers/Booking-handler.js");
+const {
+  getUser,
+  addUser,
+  userAuth,
+} = require("./handlers/userAuth-handler.js");
 const PORT = process.env.PORT || 4000;
 
 express()
@@ -23,6 +27,9 @@ express()
   .get("/adoption/:species", getSpecificSpeciesOfPets)
   .get("/adoption/id/:_id", getPet)
   .post("/booking", bookAppointment)
+  .get("/users/login/:_id", getUser)
+  .post("/users", addUser)
+  .post("/users/login", userAuth)
 
   .use((req, res) => res.status(404).type("txt").send("🤷‍♂️"))
 

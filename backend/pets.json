@@ -6,8 +6,9 @@
     "species": "Cat",
     "gender": "Male",
     "Breed": "Domestic",
-    "avatarSrc": "/assets/Charlie_cat_pic1.jpg",
-    "secondImg": "/assets/Charlie_cat_pic2.jpg"
+    "description": "Very playful and needs plenty of attention. He's addicted to salmon and chicken. Prefers a family with no other cats.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249576/Charlie_cat_pic2_mctxib.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249576/Charlie_cat_pic1_mbzhkj.jpg"
   },
   {
     "_id": "02",
@@ -16,8 +17,9 @@
     "species": "Cat",
     "gender": "Female",
     "Breed": "Domestic",
-    "avatarSrc": "/assets/Stella_cat_pic1.jpg",
-    "secondImg": "/assets/Stella_cat_pic2.jpg"
+    "description": "A beautiful black and white cat who always wants your attention. Has seperation anxiety and dosen't like to be picked up.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249610/Stella_cat_pic2_gdsgwl.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249611/Stella_cat_pic1_ciavpk.jpg"
   },
   {
     "_id": "03",
@@ -26,8 +28,9 @@
     "species": "Cat",
     "gender": "Male",
     "Breed": "Domestic",
-    "avatarSrc": "/assets/Cyril_cat_pic1.png",
-    "secondImg": "/assets/Cyril_cat_pic2.png"
+    "description": "Very affectionate little boy, with prince-like qualities. Needs reassurance when eating. Has mild separation anxiety, otherwise very well behaved.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249579/Cyril_cat_pic2_lx3okq.png",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249580/Cyril_cat_pic1_jahyjq.png"
   },
   {
     "_id": "04",
@@ -36,8 +39,9 @@
     "species": "Cat",
     "gender": "Male",
     "Breed": "Domestic",
-    "avatarSrc": "/assets/Fatty_cat_pic1.jpg",
-    "secondImg": "/assets/Fatty_cat_pic2.jpg"
+    "description": "A very chubby and lovable orange and white cat who likes nice long walks on the grass, loves to give kisses and have his tummy scratched",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249581/Fatty_cat_pic2_gh7pkf.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249581/Fatty_cat_pic1_hrsfz9.jpg"
   },
   {
     "_id": "05",
@@ -46,8 +50,9 @@
     "species": "Cat",
     "gender": "Male",
     "Breed": "Domestic",
-    "avatarSrc": "/assets/Misty_cat_pic1.jpg",
-    "secondImg": "/assets/Misty_cat_pic2.jpg"
+    "description": "A sweet and affectionate cat who constantly wants attention and food. Obsessed with tuna and good with kids.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249602/Misty_cat_pic2_ebh71h.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249602/Misty_cat_pic1_jm4klx.jpg"
   },
   {
     "_id": "06",
@@ -56,8 +61,9 @@
     "species": "Cat",
     "gender": "Female",
     "Breed": "Domestic",
-    "avatarSrc": "/assets/Cloudy_cat_pic1.jpg",
-    "secondImg": "/assets/Cloudy_cat_pic2.jpg"
+    "description": "A beautiful fluffy white and grey cat. She takes a while to get close to you but once she gains your trust, she will always want your attention.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249577/Cloudy_cat_pic1_duzgsv.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249578/Cloudy_cat_pic2_ujmgbu.jpg"
   },
   {
     "_id": "07",
@@ -66,8 +72,9 @@
     "species": "Cat",
     "gender": "Male",
     "Breed": "Domestic",
-    "avatarSrc": "/assets/Silverpelt_cat_pic1.jpg",
-    "secondImg": "/assets/Silverpelt_cat_pic2.jpg"
+    "description": "An adventurous young cat who's very energetic and loves attention.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249604/Silverpelt_cat_pic1_ex5zta.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249604/Silverpelt_cat_pic2_xnpbee.jpg"
   },
   {
     "_id": "08",
@@ -76,8 +83,9 @@
     "species": "Cat",
     "gender": "Female",
     "Breed": "Domestic",
-    "avatarSrc": "/assets/Luna_cat_pic1.jpg",
-    "secondImg": "/assets/Luna_cat_pic2.jpg"
+    "description": "A super sweet, talkative, playful, and quirky cat who loves watching birds on TV. Absolutely loves tuna.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618779128/Luna_cat_pic1_csgxnn.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249614/Luna_cat_pic2_pekjay.jpg"
   },
   {
     "_id": "09",
@@ -86,8 +94,9 @@
     "species": "Cat",
     "gender": "Male",
     "Breed": "Siamese",
-    "avatarSrc": "/assets/Takoda_cat_pic1.jpg",
-    "secondImg": "/assets/Takoda_cat_pic2.jpg"
+    "description": "A sweet kitty who loves taking walks outside. Loves going inside boxes.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249623/Takoda_cat_pic1_ysmxp6.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249623/Takoda_cat_pic2_stbwhd.jpg"
   },
   {
     "_id": "10",
@@ -96,8 +105,20 @@
     "species": "Cat",
     "gender": "Female",
     "Breed": "Domestic",
-    "avatarSrc": "/assets/Leia_cat_pic1.jpg",
-    "secondImg": "/assets/Leia_cat_pic2.jpg"
+    "description": "She's a very particular cat who loves cuddles and drinking water from the tap. Once you gain her trust she will always want attention.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249596/Leia_cat_pic1_rqssdq.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249602/Leia_cat_pic2_lpfwz4.jpg"
+  },
+  {
+    "_id": "29",
+    "name": "Miso",
+    "age": "1",
+    "species": "Cat",
+    "gender": "Female",
+    "Breed": "Domestic",
+    "description": "A very hyper and affectionate kitty who loves tuna and cuddles.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618266441/Miso_cat_pic2_xghocv.png",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618266443/Miso_cat_pic1_wqrkmc.png"
   },
   {
     "_id": "11",
@@ -106,8 +127,9 @@
     "species": "Dog",
     "gender": "Female",
     "Breed": "Pit bull/ lab",
-    "avatarSrc": "/assets/Sif_dog_pic1.png",
-    "secondImg": "/assets/Sif_dog_pic2.png"
+    "description": "A gentle girl who has big beautiful eyes that always guilt trips you into giving her treats. She's very active and loves playing outside.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249609/Sif_dog_pic2_rwywco.png",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249606/Sif_dog_pic1_p20yjh.png"
   },
   {
     "_id": "12",
@@ -116,8 +138,9 @@
     "species": "Dog",
     "gender": "Male",
     "Breed": "Golden Retriever",
-    "avatarSrc": "/assets/Winston_dog_pic1.jpg",
-    "secondImg": "/assets/Winston_dog_pic2.jpg"
+    "description": "Big goofy ball of love who loves munching on potatoes.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618778564/Winston_dog_pic1_w4bq06.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249620/Winston_dog_pic2_lvfmre.jpg"
   },
   {
     "_id": "13",
@@ -126,8 +149,9 @@
     "species": "Dog",
     "gender": "Male",
     "Breed": "Brittany Spaniel",
-    "avatarSrc": "/assets/Snooky_dog_pic1.JPG",
-    "secondImg": "/assets/Snooky_dog_pic2.jpg"
+    "description": "He's a rescue dog from the farm who loves to eat and play with the leaves. He would do anything to get treats and he's super cuddly.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249619/Snooky_dog_pic2_wck9c7.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249605/Snooky_dog_pic1_sjj7uk.jpg"
   },
   {
     "_id": "14",
@@ -136,8 +160,9 @@
     "species": "Dog",
     "gender": "Male",
     "Breed": "Husky",
-    "avatarSrc": "/assets/Sokka_dog_pic1.jpg",
-    "secondImg": "/assets/Sokka_dog_pic2.jpg"
+    "description": "A very observant and calm puppy that thrives on attempting to catch birds and squirrels, and arguing back to you when he's displeased. You will likely be pulled in by his adorable appearance and soft fur, and will learn to deal with him when he wrecks havoc on his toys. He also really likes to eat.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249619/Sokka_dog_pic1_qqkddj.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249619/Sokka_dog_pic2_f0k97w.jpg"
   },
   {
     "_id": "15",
@@ -146,8 +171,9 @@
     "species": "Dog",
     "gender": "Male",
     "Breed": "Poodle / Cocker Spaniel",
-    "avatarSrc": "/assets/Archie_dog_pic1.jpg",
-    "secondImg": "/assets/Archie_dog_pic2.jpg"
+    "description": "A very playful and loving dog, but timid with other dogs. Constantly wants to be around people, but can be extremely stubborn when he wants to be.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249593/Archie_dog_pic1_moripm.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249601/Archie_dog_pic2_oukwda.jpg"
   },
   {
     "_id": "16",
@@ -156,8 +182,9 @@
     "species": "Dog",
     "gender": "Female",
     "Breed": "Sheltie mix",
-    "avatarSrc": "/assets/Lady_dog_pic1.jpg",
-    "secondImg": "/assets/Lady_dog_pic2.jpg"
+    "description": "A very sweet and loving dog. She likes to eat meat and prefers human food over dog food.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249601/Lady_dog_pic1_iiafsm.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249599/Lady_dog_pic2_fj8yuz.jpg"
   },
   {
     "_id": "17",
@@ -166,8 +193,9 @@
     "species": "Dog",
     "gender": "Male",
     "Breed": "Labradoodle",
-    "avatarSrc": "/assets/Jackson_dog_pic1.jpg",
-    "secondImg": "/assets/Jackson_dog_pic2.jpg"
+    "description": "A goofball that loves to play all the time. He prefers staying by humans than running after other dogs. Sleep is his favorite pass time, He's 5 but still believes himself to be a baby.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618778328/Jackson_dog_pic1_ibij1c.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249587/Jackson_dog_pic2_hcikmh.jpg"
   },
   {
     "_id": "18",
@@ -176,8 +204,9 @@
     "species": "Dog",
     "gender": "Female",
     "Breed": "Corgi",
-    "avatarSrc": "/assets/Tesla_dog_pic1.jpg",
-    "secondImg": "/assets/Tesla_dog_pic2.jpg"
+    "description": "A very sweet and clingy dog. She's very active and loves the snow.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249619/Tesla_dog_pic1_lwhxux.png",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249620/Tesla_dog_pic2_a3bvgx.jpg"
   },
   {
     "_id": "19",
@@ -186,8 +215,9 @@
     "species": "Bird",
     "gender": "Female",
     "Breed": "Lovebird",
-    "avatarSrc": "/assets/Cocotte_bird_pic1.jpg",
-    "secondImg": "/assets/Cocotte_bird_pic2.jpg"
+    "description": "Very playful with lots of personality. Once he gains your trust he can be very cuddly.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249577/Cocotte_bird_pic1_zpnie7.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249578/Cocotte_bird_pic2_lnx4ey.jpg"
   },
   {
     "_id": "20",
@@ -196,8 +226,9 @@
     "species": "Bird",
     "gender": "Male",
     "Breed": "Parrot/Budgerigar Mix",
-    "avatarSrc": "/assets/Woodstock_bird_pic1.jpg",
-    "secondImg": "/assets/Woodstock_bird_pic2.jpg"
+    "description": "Gentle and very energetic bird who likes to be in his own bubble.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618778655/Woodtock_bird_pic1_qzxoc6.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249575/Woodtock_bird_pic2_nl9yya.jpg"
   },
   {
     "_id": "21",
@@ -206,8 +237,9 @@
     "species": "Bird",
     "gender": "Male",
     "Breed": "Amazon Perret",
-    "avatarSrc": "/assets/Bear_bird_pic1.jpg",
-    "secondImg": "/assets/Bear_bird_pic2.jpg"
+    "description": "Very outgoing and energetic. Loves to sing and dance. Very king like personality.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618778703/Bear_bird_pic2_cpjffi.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249575/Bear_bird_pic1_g2nv6c.jpg"
   },
   {
     "_id": "22",
@@ -216,18 +248,20 @@
     "species": "Bird",
     "gender": "Male",
     "Breed": "Cockatiel",
-    "avatarSrc": "/assets/Calypso_bird_pic1.jpg",
-    "secondImg": "/assets/Calypso_bird_pic2.jpg"
+    "description": "A very overprotected bird who loves to be the loudest in the room and has lots of energy. He loves to sing hello to guests.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618777627/Calypso_bird_pic1_jsgy8z.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249581/Calypso_bird_pic2_wojdzq.png"
   },
   {
     "_id": "23",
-    "name": "Mrs. Jasmine and Mrs. Jade",
+    "name": "Jasmine & Jade",
     "age": "4",
     "species": "Bird",
     "gender": "Female",
     "Breed": "Concures",
-    "avatarSrc": "/assets/Jasmine&Jade_bird_pic1.jpg",
-    "secondImg": "/assets/Jasmine&Jade_bird_pic2.jpg"
+    "description": "They're both very timid and insperable. Jasmine loves to keep to herself and Jade is very affectionate,loves humans and is very clingy.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249601/Jasmine_Jade_bird_pic2_mouw1g.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249595/Jasmine_Jade_bird_pic1_vvksnh.jpg"
   },
   {
     "_id": "24",
@@ -236,8 +270,9 @@
     "species": "Rabbit",
     "gender": "Male",
     "Breed": "Bunny Rabbit",
-    "avatarSrc": "/assets/Peanut_rabbit_pic1.jpg",
-    "secondImg": "/assets/Peanut_rabbit_pic2.jpg"
+    "description": "This young bunny is very curious and loves to climb all over the place. He gets along well with cats.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249603/Peanut_rabbit_pic2_hbpslm.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249602/Peanut_rabbit_pic1_yetjon.jpg"
   },
   {
     "_id": "25",
@@ -246,8 +281,9 @@
     "species": "Rabbit",
     "gender": "Male",
     "Breed": "Bunny Rabbit",
-    "avatarSrc": "/assets/Sheena_rabbit_pic1.jpg",
-    "secondImg": "/assets/Sheena_rabbit_pic2.jpg"
+    "description": "He's a very sociable bunny who's very curious and active. He's very clean and tidy. Loves cats.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249603/Sheena_rabbit_pic1_j6hxck.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249603/Sheena_rabbit_pic2_wdner9.jpg"
   },
   {
     "_id": "26",
@@ -256,8 +292,9 @@
     "species": "Rabbit",
     "gender": "Female",
     "Breed": "Lionhead",
-    "avatarSrc": "/assets/Albine_rabbit_pic1.jpg",
-    "secondImg": "/assets/Albine_rabbit_pic2.jpg"
+    "description": "She's a very affectionate rabbit with lots of character. She loves cardboard boxes and cats.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249574/Albine_rabbit_pic1_l7vz0l.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249575/Albine_rabbit_pic2_eis986.jpg"
   },
   {
     "_id": "27",
@@ -266,8 +303,9 @@
     "species": "Rabbit",
     "gender": "Male",
     "Breed": "Lionhead",
-    "avatarSrc": "/assets/Levi_rabbit_pic1.jpg",
-    "secondImg": "/assets/Levi_rabbit_pic2.jpg"
+    "description": "He's a feisty, cute ball of fur who loves to run around. Dosen't like living with other bunnies.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249596/Levi_rabbit_pic1_lhrmjv.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249598/Levi_rabbit_pic2_s3lpwn.jpg"
   },
   {
     "_id": "28",
@@ -276,7 +314,8 @@
     "species": "Rabbit",
     "gender": "Female",
     "Breed": "Bunny Rabbit Mix",
-    "avatarSrc": "/assets/Basil_rabbit_pic1.jpg",
-    "secondImg": "/assets/Basil_rabbit_pic2.jpg"
+    "description": "She's a very energetic and sweet rabbit who loves to explore and is constantly curious. Once she gets to know you, she will become very affectionate.",
+    "avatarSrc": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249574/Basil_rabbit_pic1_wm3ihd.jpg",
+    "secondImg": "https://res.cloudinary.com/ddd1g1rw8/image/upload/v1618249575/Basil_rabbit_pic2_d1z2uh.jpg"
   }
 ]

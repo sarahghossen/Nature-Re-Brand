@@ -17,7 +17,6 @@ const batchImport = async () => {
     const db = client.db("pet_data");
     const result = await db.collection("pets").insertMany(petData);
     assert.equal(petData.length, result.insertedCount);
-    // console.log(result);
   } catch (err) {
     console.log("error");
   }

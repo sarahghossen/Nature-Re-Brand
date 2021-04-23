@@ -1,12 +1,9 @@
-import React from "react";
-
 const initialState = {
   pets: null,
   status: "idle",
 };
 
 export default function petReducer(state = initialState, action) {
-  console.log(action);
   switch (action.type) {
     case "REQUEST_PET_INFO": {
       return {
