@@ -1,16 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import Tada from "react-reveal/Tada";
 
 const ConfirmationMsg = () => {
   return (
     <BookingDiv>
-      <Div>
-        <H1>Thank you for booking an Appointment!</H1>
-        <P>
-          A copy of this confirmation message will also be forwarded to your
-          email address.
-        </P>
-      </Div>
+      <Tada>
+        <Div>
+          <H1>Thank you for booking an Appointment!</H1>
+          <P>
+            A copy of this confirmation message will also be forwarded to your
+            email address.
+          </P>
+        </Div>
+      </Tada>
     </BookingDiv>
   );
 };

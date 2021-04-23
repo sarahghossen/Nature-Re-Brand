@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Shake from "react-reveal/Shake";
 
 const SignUp = ({ userData, setUserData }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
   const [errMessage, setErrMessage] = useState("");
+  const [error, setError] = useState(false);
 
   // const handleChange = (ev) => {
   //   setUserData({ ...userData, [ev.target.name]: ev.target.value });
@@ -15,25 +18,31 @@ const SignUp = ({ userData, setUserData }) => {
   const handleSignUp = (ev) => {
     ev.preventDefault();
 
-    email.includes("@") === false
-      ? setErrMessage("not a proper email")
-      : fetch("/users", {
-          method: "POST",
-          body: JSON.stringify({ email, password, name }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            if (data.status === "success") {
-              setUserData(data.user);
-            } else {
-              setErrMessage("user already exists");
-            }
-          });
+    if (email.includes("@") === false) {
+      setErrMessage("not a proper email");
+      setError(true);
+    } else if (password !== confirmPassword) {
+      setErrMessage("passwords dont match");
+      setError(true);
+    } else {
+      fetch("/users", {
+        method: "POST",
+        body: JSON.stringify({ email, password, name }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.status === "success") {
+            setUserData(data.user);
+          } else {
+            setErrMessage("user already exists");
+            setError(true);
+          }
+        });
+    }
   };
-
   return (
     <Container>
       <SignUpForm>
@@ -58,8 +67,20 @@ const SignUp = ({ userData, setUserData }) => {
           name="password"
           onChange={(e) => setPassword(e.target.value)}
         />
+        <Label>Confirm Password</Label>
+        <Input
+          type="password"
+          name="password"
+          onChange={(e) => setConfirmPassword(e.target.value)}
+        />
         <SignUpButton onClick={handleSignUp}>Sign Up</SignUpButton>
-        <P>{errMessage}</P>
+        {error ? (
+          <Shake>
+            <P>{errMessage}</P>
+          </Shake>
+        ) : (
+          <P>{errMessage}</P>
+        )}
       </SignUpForm>
       <H2>
         Have an Account?{" "}

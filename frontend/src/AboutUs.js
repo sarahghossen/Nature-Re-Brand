@@ -1,16 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 const AboutUs = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
   return (
     <AboutDiv>
       <H1Div>
-        <H1>About Us</H1>
-        <BigP>
-          Since first opening our doors in 1985, Nature Pet Centers has always
-          been considered as leaders in the Pet Industry.
-        </BigP>
+        <Fade left>
+          <H1>About Us</H1>
+          <BigP>
+            Since first opening our doors in 1985, Nature Pet Centers has always
+            been considered as leaders in the Pet Industry.
+          </BigP>
+        </Fade>
       </H1Div>
       <AboutDiv2>
         <AboutUsDiv3>
@@ -41,7 +49,9 @@ const AboutUs = () => {
             Are you ready to see our adorable animals available for adoption?
             They're waiting for you!
           </H3>
-          <ViewButton to="/adoption">View Now</ViewButton>
+          <ViewButton onClick={scrollToTop} to="/adoption">
+            View Now
+          </ViewButton>
         </AboutUsDiv3>
         <ImgDiv>
           <Img src="images/birdBlob.png" />

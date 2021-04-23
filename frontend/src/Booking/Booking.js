@@ -8,13 +8,11 @@ import "react-datepicker/dist/react-datepicker.css";
 import ErrorMsg from "../ErrorMsg";
 import ConfirmationMsg from "./ConfirmationMsg";
 import { errorMessages } from "../errorMessages";
+import Shake from "react-reveal/Shake";
 
 const Booking = () => {
   const [startDate, setStartDate] = useState(null);
-  // const [endDate, setEndDate] = useState(null);
-  // const [startDate, setStartDate] = useState(
-  //   setHours(setMinutes(new Date(), 30), 17)
-  // );
+
   const [bookingData, setBookingData] = useState({
     fullName: "",
     Email: "",
@@ -31,6 +29,7 @@ const Booking = () => {
   const [success, setSuccess] = useState(false);
   const [subStatus, setSubStatus] = useState("idle");
   const [errMessage, setErrMessage] = useState("");
+  const [error, setError] = useState(false);
   const successMsg = "Success";
   let checkDisabled =
     bookingData.fullName === "" ||
@@ -70,7 +69,7 @@ const Booking = () => {
         } else if (error) {
           setSubStatus("error");
           setErrMessage(errorMessages[error]);
-          console.log(errorMessages[error]);
+          setError(true);
         }
       });
   };
@@ -149,7 +148,11 @@ const Booking = () => {
             Submit
           </Button>
         </Form>
-        {subStatus === "error" && <ErrorMsg>{errMessage}</ErrorMsg>}
+        {error && (
+          <Shake>
+            <ErrorMsg>{errMessage}</ErrorMsg>
+          </Shake>
+        )}
       </Div>
     </BookingDiv>
   ) : (

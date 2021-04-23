@@ -9,13 +9,12 @@ import {
 } from "../actions";
 import Pet from "./Pet";
 import { getPetDataArray } from "../reducers/petReducer";
-// import AdoptionPage from "./AdoptionPage";
 
 const AllPets = ({ petSpecies }) => {
   const dispatch = useDispatch();
   const petData = useSelector(getPetDataArray);
   const [filteredPets, setFilteredPets] = useState([]);
-  // console.log(petSpecies);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     dispatch(requestPetInfo());
@@ -31,25 +30,21 @@ const AllPets = ({ petSpecies }) => {
   }, []);
 
   useEffect(() => {
+    setLoading(true);
     fetch(`/adoption/${petSpecies}`)
       .then((res) => res.json())
       .then((data) => {
+        setLoading(false);
         setFilteredPets(data.data);
-        // console.log("data", data.data);
       });
   }, [petSpecies]);
 
-  // if (petData) {
-  //   console.log("PETS DATA", petData);
-  // }
-  console.log(petData, petSpecies);
   return (
     <>
       {petData && petSpecies === null && (
         <>
           <Wrapper>
             <NumberOfPets>
-              {/* <SearchBar /> */}
               <H1>All Pets</H1>
             </NumberOfPets>
             <PetData>
@@ -74,27 +69,34 @@ const AllPets = ({ petSpecies }) => {
       )}
       {petSpecies && (
         <Wrapper>
-          <NumberOfPets>
-            {/* <SearchBar /> */}
-            <H1>{filteredPets.length + " " + petSpecies}</H1>
-          </NumberOfPets>
-          <PetData>
-            {filteredPets.map((data) => {
-              return (
-                <>
-                  <Pet
-                    key={data._id}
-                    avatarSrc={data.avatarSrc}
-                    name={data.name}
-                    species={data.species}
-                    gender={data.gender}
-                    age={data.age}
-                    id={data._id}
-                  />
-                </>
-              );
-            })}
-          </PetData>
+          {loading ? (
+            <LoadingDiv>
+              <LoadingImg src="/images/Loading.gif" />
+            </LoadingDiv>
+          ) : (
+            <>
+              <NumberOfPets>
+                <H1>{filteredPets.length + " " + petSpecies}</H1>
+              </NumberOfPets>
+              <PetData>
+                {filteredPets.map((data) => {
+                  return (
+                    <>
+                      <Pet
+                        key={data._id}
+                        avatarSrc={data.avatarSrc}
+                        name={data.name}
+                        species={data.species}
+                        gender={data.gender}
+                        age={data.age}
+                        id={data._id}
+                      />
+                    </>
+                  );
+                })}
+              </PetData>
+            </>
+          )}
         </Wrapper>
       )}
       {petData === null && (petSpecies === null || petSpecies === undefined) && (

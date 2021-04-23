@@ -24,11 +24,9 @@ const App = () => {
   let getId = localStorage.getItem("_id");
   useEffect(() => {
     if (getId) {
-      console.log("BEFORE SIGN IN", getId);
       fetch(`/users/login/${getId}`)
         .then((res) => res.json())
         .then((data) => {
-          console.log("USER LOGGED", data.user);
           setUserData(data.user);
         });
     }

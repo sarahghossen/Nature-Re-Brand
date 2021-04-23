@@ -12,6 +12,11 @@ const Footer = () => {
       behavior: "smooth",
     });
   };
+  const scrollToTopNoSmooth = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
   return (
     <FooterDiv>
       <Div1>
@@ -43,7 +48,9 @@ const Footer = () => {
         <P>6361 Transcanada Route #119, Complexe Pointe-Claire</P>
         <P>Pointe-Claire, Quebec, H9R 5A5</P>
         <P>514-694-3291</P>
-        <StyledLink to="/contact-us">view all 7 locations</StyledLink>
+        <StyledLink onClick={scrollToTopNoSmooth} to="/contact-us">
+          view all 7 locations
+        </StyledLink>
       </Div2>
     </FooterDiv>
   );

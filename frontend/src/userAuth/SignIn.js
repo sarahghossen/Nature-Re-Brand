@@ -2,19 +2,22 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import Shake from "react-reveal/Shake";
 
 const SignIn = ({ userData, setUserData }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errMessage, setErrMessage] = useState("");
+  const [error, setError] = useState(false);
   const history = useHistory();
-
-  // console.log(email);
 
   const handleSignIn = (ev) => {
     ev.preventDefault();
 
-    email.includes("@") === false && setErrMessage("Invalid email or password");
+    if (email.includes("@") === false) {
+      setErrMessage("Invalid email or password");
+      setError(true);
+    }
 
     fetch("/users/login", {
       method: "POST",
@@ -26,12 +29,12 @@ const SignIn = ({ userData, setUserData }) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.status === "success") {
-          // console.log("SIGN IN, USER ID", data.user._id);
           setUserData(data.user);
           localStorage.setItem("_id", data.user._id);
           history.push("/");
         } else {
           setErrMessage("Invalid email or password");
+          setError(true);
         }
       });
   };
@@ -53,8 +56,14 @@ const SignIn = ({ userData, setUserData }) => {
             name="password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <SignInButton onClick={handleSignIn}>Login</SignInButton>
-          <P>{errMessage}</P>
+          <SignInButton onClick={handleSignIn}>Sign In</SignInButton>
+          {error ? (
+            <Shake>
+              <P>{errMessage}</P>
+            </Shake>
+          ) : (
+            <P>{errMessage}</P>
+          )}
         </SignInForm>
         <SignUpDiv>
           <H2>

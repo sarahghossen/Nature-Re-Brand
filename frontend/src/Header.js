@@ -6,7 +6,6 @@ import { useMediaQuery } from "./useMediaQuery";
 const Header = ({ setPetSpecies, userData, setUserData }) => {
   const [burger, setBurger] = useState(false);
   let isPageWide = useMediaQuery("(min-width: 900px)");
-  console.log("USERDATA", userData);
 
   const handleAdoptionLink = () => {
     setBurger(!burger);
@@ -38,7 +37,9 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
               <WelcomeDiv>
                 <Icon src="/images/userIcon.png" />
                 <Welcome>WELCOME, {userData.name.toUpperCase()}</Welcome>
-                <StyledSignIn onClick={handleSignOut}>Sign Out</StyledSignIn>
+                <StyledSignIn onClick={handleSignOut} to="sign-in">
+                  Sign Out
+                </StyledSignIn>
               </WelcomeDiv>
             </LinkDiv>
           </UserDataDiv>
@@ -191,6 +192,7 @@ const Nav = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  z-index: 9;
   align-items: center;
   background-color: var(--yellow-color);
 `;
@@ -201,7 +203,7 @@ const Burger = styled.button`
   width: 60px;
   height: 60px;
   border: none;
-  z-index: 2;
+  z-index: 10;
   outline: none;
   cursor: pointer;
   transition: all 0.5s ease;

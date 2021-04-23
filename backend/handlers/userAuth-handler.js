@@ -13,11 +13,8 @@ const options = {
 const getUser = async (req, res) => {
   const client = await MongoClient(MONGO_URI, options);
   const _id = req.params._id;
-  console.log(req.params);
-  console.log("REQ PARAMS", req.params._id);
   await client.connect();
   const db = client.db("pet_data");
-  console.log(_id);
   db.collection("users").findOne({ _id: ObjectID(_id) }, (err, result) => {
     result
       ? res.status(200).json({ status: "success", _id, user: result })
@@ -44,7 +41,6 @@ const addUser = async (req, res) => {
         email: req.body.email,
         password: hashedPassword,
       });
-      // console.log(response);
       res.status(201).json({ status: "success", user: response.ops[0] });
     } else {
       res.status(400).json({ status: "not allowed" });
@@ -63,8 +59,6 @@ const userAuth = async (req, res) => {
     const user = await db.collection("users").findOne({
       email: req.body.email,
     });
-    // console.log(req.body.email);
-    // res.status(201).json({ status: 201, user });
     if (await bcrypt.compare(req.body.password, user.password)) {
       res.status(201).json({ status: "success", user });
     } else {

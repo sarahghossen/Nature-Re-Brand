@@ -12,7 +12,6 @@ const options = {
 const bookAppointment = async (req, res) => {
   const client = await MongoClient(MONGO_URI, options);
   const email = req.body.Email;
-  console.log(Object.values(req.body));
 
   try {
     await client.connect();

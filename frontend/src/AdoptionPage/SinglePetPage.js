@@ -5,6 +5,7 @@ import Popup from "reactjs-popup";
 import Booking from "../Booking/Booking";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import Fade from "react-reveal/Fade";
 
 const SinglePetPage = ({ setPetSpecies }) => {
   const [petId, setPetId] = useState(undefined);
@@ -23,45 +24,49 @@ const SinglePetPage = ({ setPetSpecies }) => {
   return petId ? (
     <>
       <Container>
-        <Opener>
-          <StyledLink onClick={() => setPetSpecies(null)} to="/adoption">
-            ⇐ View All Pets
-          </StyledLink>
-          <H1>{petId.name}</H1>
-          <Popup trigger={<Button>Book an Appointment</Button>} modal nested>
-            {(close) => (
-              <div>
-                <ButtonClose onClick={close}>&times;</ButtonClose>
-                <Booking />
-              </div>
-            )}
-          </Popup>
-          <H2>Description</H2>
-          <PDes>{petId.description}</PDes>
-          <Description>
-            <P>
-              Reference Number: <Bold>{petId._id}</Bold>
-            </P>
-            <P>
-              Species: <Bold2>{petId.species}</Bold2>
-            </P>
-            <P>
-              Age: <Bold3>{petId.age}</Bold3>
-            </P>
-            <P>
-              Breed: <Bold4>{petId.Breed}</Bold4>
-            </P>
-          </Description>
-        </Opener>
+        <Fade left>
+          <Opener>
+            <StyledLink onClick={() => setPetSpecies(null)} to="/adoption">
+              ⇐ View All Pets
+            </StyledLink>
+            <H1>{petId.name}</H1>
+            <Popup trigger={<Button>Book an Appointment</Button>} modal nested>
+              {(close) => (
+                <div>
+                  <ButtonClose onClick={close}>&times;</ButtonClose>
+                  <Booking />
+                </div>
+              )}
+            </Popup>
+            <H2>Description</H2>
+            <PDes>{petId.description}</PDes>
+            <Description>
+              <P>
+                Reference Number: <Bold>{petId._id}</Bold>
+              </P>
+              <P>
+                Species: <Bold2>{petId.species}</Bold2>
+              </P>
+              <P>
+                Age: <Bold3>{petId.age}</Bold3>
+              </P>
+              <P>
+                Breed: <Bold4>{petId.Breed}</Bold4>
+              </P>
+            </Description>
+          </Opener>
+        </Fade>
         <ImageDiv>
-          <Carousel>
-            <div>
-              <img src={petId.avatarSrc} />
-            </div>
-            <div>
-              <img src={petId.secondImg} />
-            </div>
-          </Carousel>
+          <Fade right>
+            <Carousel>
+              <div>
+                <img src={petId.avatarSrc} />
+              </div>
+              <div>
+                <img src={petId.secondImg} />
+              </div>
+            </Carousel>
+          </Fade>
         </ImageDiv>
       </Container>
     </>

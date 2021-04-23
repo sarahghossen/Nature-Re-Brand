@@ -1,26 +1,26 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import { useMediaQuery } from "./useMediaQuery";
+import Fade from "react-reveal/Fade";
 
 const Homepage = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
     });
   };
 
   return (
     <HomeDiv>
-      {/* <BackgroundImg src="images/dog_header.png" /> */}
       <WelcomeDiv>
-        <H1>Welcome To Nature!</H1>
-        <BigP>
-          In a world that is becoming more impersonal and stressful, we offer
-          our customers a friendly place where you will find a great selection
-          of pet products and a friendly and helpful staff.
-        </BigP>
+        <Fade left>
+          <H1>Welcome To Nature!</H1>
+          <BigP>
+            In a world that is becoming more impersonal and stressful, we offer
+            our customers a friendly place where you will find a great selection
+            of pet products and a friendly and helpful staff.
+          </BigP>
+        </Fade>
       </WelcomeDiv>
       <ServeDiv>
         <ServeImgDiv>
@@ -46,38 +46,42 @@ const Homepage = () => {
         </ServeText>
       </ServeDiv>
       <ThreeButtonDiv>
-        <ButtonDiv>
-          <ButtonImg src="images/buttonIconStory.png" />
-          <H2>Our Story</H2>
-          <P>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-          </P>
-          <ButtonReadMore to="/about-us">Read more</ButtonReadMore>
-        </ButtonDiv>
-        <ButtonDiv>
-          <ButtonImg src="images/buttonIconAdopt.png" />
-          <H2>Adopt</H2>
-          <P>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-          </P>
-          <ButtonReadMore onClick={scrollToTop} to="/adoption">
-            Read more
-          </ButtonReadMore>
-        </ButtonDiv>
-        <ButtonDiv>
-          <ButtonImg
-            src="images/buttonIconDonate.png"
-            style={{ marginTop: "25px" }}
-          />
-          <H2>Donate</H2>
-          <P>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
-          </P>
-          <ButtonReadMore>Read more</ButtonReadMore>
-        </ButtonDiv>
+        <Fade bottom>
+          <ButtonDiv>
+            <ButtonImg src="images/buttonIconStory.png" />
+            <H2>Our Story</H2>
+            <P>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+            </P>
+            <ButtonReadMore onClick={scrollToTop} to="/about-us">
+              Read more
+            </ButtonReadMore>
+          </ButtonDiv>
+          <ButtonDiv>
+            <ButtonImg src="images/buttonIconAdopt.png" />
+            <H2>Adopt</H2>
+            <P>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+            </P>
+            <ButtonReadMore onClick={scrollToTop} to="/adoption">
+              Read more
+            </ButtonReadMore>
+          </ButtonDiv>
+          <ButtonDiv>
+            <ButtonImg
+              src="images/buttonIconDonate.png"
+              style={{ marginTop: "25px" }}
+            />
+            <H2>Donate</H2>
+            <P>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+            </P>
+            <ButtonReadMore>Read more</ButtonReadMore>
+          </ButtonDiv>
+        </Fade>
       </ThreeButtonDiv>
       <SubscribeDiv>
         <H2>Subscribe To Our Mailing List For The Lastest News!</H2>

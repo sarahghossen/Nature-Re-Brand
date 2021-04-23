@@ -1,26 +1,35 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Fade from "react-reveal/Fade";
 
 const AdoptionBanner = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+    });
+  };
   return (
     <AdoptionDiv>
       {/* <BackgroundImg src="images/dog_header.png" /> */}
       <WelcomeDiv>
-        <H1>Adoption</H1>
-        <BigP>
-          Here you will find information on available pets through our{" "}
-          <Link
-            to="contact-us"
-            style={{
-              textDecoration: "none",
-              color: "var(--secondary-color)",
-            }}
-          >
-            7 stores
-          </Link>{" "}
-          in the Greater Montreal and Laval area.
-        </BigP>
+        <Fade left>
+          <H1>Adoption</H1>
+          <BigP>
+            Here you will find information on available pets through our{" "}
+            <Link
+              onClick={scrollToTop}
+              to="contact-us"
+              style={{
+                textDecoration: "none",
+                color: "var(--secondary-color)",
+              }}
+            >
+              7 stores
+            </Link>{" "}
+            in the Greater Montreal and Laval area.
+          </BigP>
+        </Fade>
       </WelcomeDiv>
     </AdoptionDiv>
   );
