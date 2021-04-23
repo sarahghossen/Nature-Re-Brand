@@ -78,7 +78,7 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
             </ImgDiv>
             <WelcomeMobile>
               <IconMobile src="/images/userIcon.png" />
-              {/* {userData.name.toUpperCase()} */}
+              {userData.name.toUpperCase()}
             </WelcomeMobile>
             <ButtonDiv>
               <Burger
@@ -94,6 +94,7 @@ const Header = ({ setPetSpecies, userData, setUserData }) => {
                   <LinkMobile
                     onClick={() => setBurger(!burger)}
                     onClick={handleSignOut}
+                    to="sign-in"
                   >
                     Sign Out
                   </LinkMobile>
@@ -228,6 +229,7 @@ const WelcomeMobile = styled.div`
 `;
 const IconMobile = styled.img`
   width: 20px;
+  margin-right: 5px;
 `;
 
 const UL = styled.ul`
@@ -298,6 +300,7 @@ const Logo = styled.img`
 const Icon = styled.img`
   width: 20px;
   margin-left: 40px;
+  margin-right: 5px;
 `;
 
 const StyledLink = styled(Link)`

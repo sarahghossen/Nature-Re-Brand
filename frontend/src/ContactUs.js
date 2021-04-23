@@ -1,16 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import MapAPI from "./GoogleMaps/MapAPI";
+import Fade from "react-reveal/Fade";
 
 const ContactUs = () => {
   return (
     <ContactUsDiv>
       <H1Div>
-        <H1>Contact Us</H1>
-        <BigP>
-          Have any questions? Call or email us during our opening hours at any
-          one of our stores!
-        </BigP>
+        <Fade left>
+          <H1>Contact Us</H1>
+          <BigP>
+            Have any questions? Call or email us during our opening hours at any
+            one of our stores!
+          </BigP>
+        </Fade>
       </H1Div>
       <BigDiv>
         <MapDiv>
