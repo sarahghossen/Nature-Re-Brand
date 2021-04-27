@@ -5,9 +5,7 @@
   "author": "sarah",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "./node_modules/.bin/netlify-lambda serve src",
-    "build": "./node_modules/.bin/netlify-lambda build src"
+    "dev": "nodemon index.js"
   },
   "dependencies": {
     "assert": "^2.0.0",
