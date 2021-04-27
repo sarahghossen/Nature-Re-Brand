@@ -3,7 +3,6 @@ import styled from "styled-components";
 import DatePicker from "react-datepicker";
 import setHours from "date-fns/setHours";
 import setMinutes from "date-fns/setMinutes";
-import setDate from "date-fns/setDate";
 import "react-datepicker/dist/react-datepicker.css";
 import ErrorMsg from "../ErrorMsg";
 import ConfirmationMsg from "./ConfirmationMsg";
