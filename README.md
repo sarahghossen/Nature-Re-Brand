@@ -23,7 +23,7 @@ Tools I used include: React, Redux, Node and MongoDB.
 <h2> Adoption Page </h2> 
 <p>People are able to filter by the pets species so that they don't have to keep scrolling through the "All Pets" section. A cool feature I would like to add in the future would be a search bar if someone had a very specific pet in mind that they would like to look up for easy access.</p>
 <img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634681/viewing_pets_gif_iqgdpd.gif" width="600px">
-<h2> Book an appointment </h2> 
+<h2> Book an Appointment </h2> 
 <p>Once you choose a furry friend that you think would be the perfect fit, you would want to book an appointment. You're only allowed to submit the booking form once you fill out all the information. If the email is invalid or you already booked with that specific pet with the same email, you will recieve an error. Once you submitted successfully, you will recieve email confirmation with all of the details!</p>
 <img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634133/form_gif_iodmru.gif" width="600px">
 <h2> Sign in/Sign up </h2> 
