@@ -4,7 +4,7 @@
 
 Tools I used include: React, Redux, Node and MongoDB. 
 
-<i>Note:</i> This project is for educational purposes only and Pet Centre Nature retains 100% of their intellectual properties and brand. Not all information is accurate to Pet Centre Nature. Find out more about them here: http://en.naturepet.com/
+<i>🚨Note:</i> This project is for educational purposes only and Pet Centre Nature retains 100% of their intellectual properties and brand. Not all information is accurate to Pet Centre Nature. Find out more about them here: http://en.naturepet.com/
 
 <h2>Youtube demo: https://youtu.be/t3SIcS5H8iA </h2>
 
@@ -23,7 +23,7 @@ Tools I used include: React, Redux, Node and MongoDB.
 <h2> HomePage</h2> 
 <img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634125/homepage_gif_dbmevx.gif" width="600px">
 <h2> Adoption Page </h2> 
-<img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634111/viewing_pets_gif_zswzde.gif" width="600px">
+<img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634681/viewing_pets_gif_iqgdpd.gif" width="600px">
 <h2> Book an appointment </h2> 
 <img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634133/form_gif_iodmru.gif" width="600px">
 <h2> Sign in/sign up </h2> 
