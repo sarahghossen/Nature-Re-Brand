@@ -16,7 +16,7 @@ Tools I used include: React, Redux, Node and MongoDB.
 
 <img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634125/homepage_gif_dbmevx.gif" width="600px">
 
-<h1>Virtual tour✨</h1>
+<h1>Virtual Tour✨</h1>
 
 <p> I will be going through all the features available on the site at the moment. I will soon be adding more features to make the experience better! </p> 
 
@@ -26,7 +26,7 @@ Tools I used include: React, Redux, Node and MongoDB.
 <h2> Book an appointment </h2> 
 <p>Once you choose a furry friend that you think would be the perfect fit, you would want to book an appointment. You're only allowed to submit the booking form once you fill out all the information. If the email is invalid or you already booked with that specific pet with the same email, you will recieve an error. Once you submitted successfully, you will recieve email confirmation with all of the details!</p>
 <img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634133/form_gif_iodmru.gif" width="600px">
-<h2> Sign in/sign up </h2> 
+<h2> Sign in/Sign up </h2> 
 <p>This feature will be very practical once I add the favorite feature. Once added, you will be able to ❤️heart❤️ a pet and add it to your favourites page so that way you won't forget the pet that you're interested in and you can continue browsing with no stress. </p>
 <img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634118/sign_up_gif_a2gmp6.gif" width="600px">
 <h2> Contact Us </h2> 
