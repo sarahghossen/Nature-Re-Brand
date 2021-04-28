@@ -27,7 +27,7 @@ Tools I used include: React, Redux, Node and MongoDB.
 <p>Once you choose a furry friend that you think would be the perfect fit, you would want to book an appointment. You're only allowed to submit the booking form once you fill out all the information. If the email is invalid or you already booked with that specific pet with the same email, you will recieve an error. Once you submitted successfully, you will recieve email confirmation with all of the details!</p>
 <img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634133/form_gif_iodmru.gif" width="600px">
 <h2> Sign in/sign up </h2> 
-<p>This feature will be very practical once I add the favorite feature, where you'll be able to heart 💖 a pet and add it to your favourites page if you're still browsing and want to look browse more before booking an appointment.</p>
+<p>This feature will be very practical once I add the favorite feature. Once added, you will be able to ❤️heart❤️ a pet and add it to your favourites page so that way you won't forget the pet that you're interested in and you can continue browsing with no stress. </p>
 <img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634118/sign_up_gif_a2gmp6.gif" width="600px">
 <h2> Contact Us </h2> 
 <p>A google maps API is being used to make it easier to view all of 7 locations. If you click on the marker, you can see all of the information for each store. The information is also posted on the side of the map. </p>
