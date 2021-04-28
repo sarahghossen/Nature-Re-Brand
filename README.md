@@ -20,9 +20,14 @@ Tools I used include: React, Redux, Node and MongoDB.
 
 <p> I will be going through all the features available on the site at the moment. I will soon be adding more features to make the experience better! </p> 
 
-<h2> HomePage and About Us</h2> 
+<h2> HomePage</h2> 
+<img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634125/homepage_gif_dbmevx.gif" width="600px">
 <h2> Adoption Page </h2> 
+<img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634111/viewing_pets_gif_zswzde.gif" width="600px">
 <h2> Book an appointment </h2> 
+<img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634133/form_gif_iodmru.gif" width="600px">
 <h2> Sign in/sign up </h2> 
+<img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634118/sign_up_gif_a2gmp6.gif" width="600px">
 <h2> Contact Us </h2> 
+<img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634204/contact_gif_lwzjg4.gif" width="600px">
 
