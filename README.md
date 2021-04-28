@@ -16,20 +16,20 @@ Tools I used include: React, Redux, Node and MongoDB.
 
 <img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634125/homepage_gif_dbmevx.gif" width="600px">
 
-<h2>Virtual tour✨</h2>
+<h1>Virtual tour✨</h1>
 
 <p> I will be going through all the features available on the site at the moment. I will soon be adding more features to make the experience better! </p> 
 
 <h2> Adoption Page </h2> 
-<p>People are able to filter by the pets species so that they don't have to keep scrolling through the All Pets section. A cool feature I would like to add on in the future would bea search bar if someone had a very specific pet in mind.</p>
+<p>People are able to filter by the pets species so that they don't have to keep scrolling through the "All Pets" section. A cool feature I would like to add in the future would be a search bar if someone had a very specific pet in mind that they would like to look up for easy access.</p>
 <img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634681/viewing_pets_gif_iqgdpd.gif" width="600px">
 <h2> Book an appointment </h2> 
-<p>Once you choose a furry friend that you think would be the perfect fit, you're able to book an appointment! You're only allowed to submit once you fill out all the information. If the email is invalid or you already booked that specific pet with the same email, you will recieve an error. Once you submitted, you will recive email confirmation with all of the details!</p>
+<p>Once you choose a furry friend that you think would be the perfect fit, you would want to book an appointment. You're only allowed to submit the booking form once you fill out all the information. If the email is invalid or you already booked with that specific pet with the same email, you will recieve an error. Once you submitted successfully, you will recieve email confirmation with all of the details!</p>
 <img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634133/form_gif_iodmru.gif" width="600px">
 <h2> Sign in/sign up </h2> 
-<p>This feature will be very practical once I add the favorite feature, where you'll be able to heart a pet and add it to your favourites page if you're still browsing and want to look more before booking an appointment.</p>
+<p>This feature will be very practical once I add the favorite feature, where you'll be able to heart 💖 a pet and add it to your favourites page if you're still browsing and want to look browse more before booking an appointment.</p>
 <img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634118/sign_up_gif_a2gmp6.gif" width="600px">
 <h2> Contact Us </h2> 
-<p>A google maps api is being used to make it easier to view all of 7 locations. If you click on the marker, you can see all of the information for each store. The information is also posted on the side. </p>
+<p>A google maps API is being used to make it easier to view all of 7 locations. If you click on the marker, you can see all of the information for each store. The information is also posted on the side of the map. </p>
 <img src="https://res.cloudinary.com/ddd1g1rw8/image/upload/v1619634204/contact_gif_lwzjg4.gif" width="600px">
 
